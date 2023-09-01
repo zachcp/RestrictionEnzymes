@@ -2236,35 +2236,24 @@ mod tests {
         let aari = load_restrictionenzyme_data(RestrictionEnzymeEnum::Aari);
         println!("aari! {:?}", aari);
         assert_eq!(aari.name, "Aari");
+        // assert_eq!(aari.charac, "Aari");
+        assert_eq!(aari.compsite, "(?=(?P<AarI>CACCTGC))|(?=(?P<AarI_as>GCAGGTG))");
+        // assert_eq!(aari.dna, null);
         assert_eq!(aari.freq, 16384.0);
-        assert_eq!(aari.ovhgseq, "NNNN".to_string());
-        assert_eq!(aari.site, "CACCTGC".to_string());
+        assert_eq!(aari.fst3, 8);
+        assert_eq!(aari.fst5, 11);
+        assert_eq!(aari.id, 2892);
+        assert_eq!(aari.inact_temp, 65);
+        assert_eq!(aari.opt_temp, 37);
+        assert_eq!(aari.ovhg, -4);
+        assert_eq!(aari.ovhgseq, "NNNN");
+        // assert_eq!(aari.results, -4);
+        // assert_eq!(aari.scd3, "");
+        // assert_eq!(aari.scd5, "");
+        assert_eq!(aari.site, "CACCTGC");
         assert_eq!(aari.size, 7);
         assert_eq!(aari.substrat, "DNA");
         assert_eq!(aari.suppl, ["B"]);
-        assert_eq!(aari.scd5, null);
-
-        // struct RestrictionEnzyme {
-        //     name: String,
-        //     charac: RestrictionEnzymeChardata,
-        //     compsite: String,
-        //     dna: Option<String>,
-        //     freq: f32,
-        //     fst3: i32,
-        //     fst5: i32,
-        //     id: i32,
-        //     inact_temp: i32,
-        //     opt_temp: i32,
-        //     ovhg: i32,
-        //     ovhgse: Option<String>,
-        //     results: Option<String>,
-        //     scd3: Option<String>,
-        //     scd5: Option<String>,
-        //     site: String,
-        //     size: i32,
-        //     substrat: String,
-        //     suppl: Vec<String>,
-        //     uri: String,
-        // }
-    }
+        assert_eq!(aari.uri, "https://identifiers.org/rebase:2892");
+            }
 }
