@@ -2190,6 +2190,8 @@ fn load_restrictionenzyme_data(enzyme: RestrictionEnzymeEnum) -> RestrictionEnzy
 //     println!("aari! {:?}", aari);
 // }
 
+
+
 #[cfg(test)]
 mod tests {
     use super::*;
@@ -2199,9 +2201,13 @@ mod tests {
         let aari = load_restrictionenzyme_data(RestrictionEnzymeEnum::Aari);
         println!("aari! {:?}", aari);
         assert_eq!(aari.name, "Aari");
-        // assert_eq!(aari.charac, "Aari");
+        assert_eq!(aari.charac.start, 11);
+        assert_eq!(aari.charac.stop, 8);
+        assert_eq!(aari.charac.something1, None);
+        assert_eq!(aari.charac.something2, None);
+        assert_eq!(aari.charac.site, "CACCTGC");
         assert_eq!(aari.compsite, "(?=(?P<AarI>CACCTGC))|(?=(?P<AarI_as>GCAGGTG))");
-        // assert_eq!(aari.dna, null);
+        assert_eq!(aari.dna, None);
         assert_eq!(aari.freq, 16384.0);
         assert_eq!(aari.fst3, 8);
         assert_eq!(aari.fst5, 11);
@@ -2210,9 +2216,9 @@ mod tests {
         assert_eq!(aari.opt_temp, 37);
         assert_eq!(aari.ovhg, -4);
         assert_eq!(aari.ovhgseq, "NNNN");
-        // assert_eq!(aari.results, -4);
-        // assert_eq!(aari.scd3, "");
-        // assert_eq!(aari.scd5, "");
+        assert_eq!(aari.results, None);
+        assert_eq!(aari.scd3, None);
+        assert_eq!(aari.scd5, None);
         assert_eq!(aari.site, "CACCTGC");
         assert_eq!(aari.size, 7);
         assert_eq!(aari.substrat, "DNA");
