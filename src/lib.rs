@@ -1,48 +1,134 @@
+//! Restriction Analysis Libraries.
+//! 
+//! 
+//! Used REBASE emboss files version 205 (2022).
+//! 
+//! Derived from the [Biopython Restriction_Dictionary](https://github.com/biopython/biopython/blob/master/Bio/Restriction/Restriction_Dictionary.py)
+//! which originates from the [Rebase](http://rebase.neb.com).
+//! 
+//! 
+//! Biopythohttps://github.com/biopython/biopython/issues/972
+//! 
+//! ** REBASE version 610                                              emboss_e.610
+//! **    =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+//! **    REBASE, The Restriction Enzyme Database   http://rebase.neb.com
+//! **    Copyright (c)  Dr. Richard J. Roberts, 2016.   All rights reserved.
+//! **    =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+//! ** 
+//! **  Rich Roberts                                                    Sep 29 2016
+//! 
+//! 
+//! 
+//! Those seeking to distribute REBASE files with their software packages are welcome to do so, providing it is clear to your users that they are not being charged for the REBASE data. It should be transparent that REBASE is a free and independent resource, with the following bibliographical reference:
+//!  LATEST REVIEW: PDF file...
+//!  Roberts, R.J., Vincze, T., Posfai, J., Macelis, D.
+//!  REBASE-a database for DNA restriction and modification: enzymes, genes and genomes.
+//!  Nucleic Acids Res. 43: D298-D299 (2015).
+//! 
+//! OFFICIAL REBASE WEB SITE: [Rebase](http://rebase.neb.com)
+//! 
+//! 
+//! 
+//!
+//! name<ws>pattern<ws>len<ws>ncuts<ws>blunt<ws>c1<ws>c2<ws>c3<ws>c4
+//! Where:
+//! name = name of enzyme
+//! pattern = recognition site
+//! len = length of pattern
+//! ncuts = number of cuts made by enzyme
+//!      Zero represents unknown
+//! blunt = true if blunt end cut, false if sticky
+//! c1 = First 5' cut
+//! c2 = First 3' cut
+//! c3 = Second 5' cut
+//! c4 = Second 3' cut
+//!
+//! Examples:
+//! AAC^TGG -> 6 2 1 3 3 0 0
+//! A^ACTGG -> 6 2 0 1 5 0 0
+//! AACTGG  -> 6 0 0 0 0 0 0
+//! AACTGG(-5/-1) -> 6 2 0 1 5 0 0
+//! (8/13)GACNNNNNNTCA(12/7) -> 12 4 0 -9 -14 24 19
+//!
+//! i.e. cuts are always to the right of the given
+//! residue and sequences are always with reference to
+//! the 5' strand.
+//! Sequences are numbered ... -3 -2 -1 1 2 3 ... with
+//! the first residue of the pattern at base number 1.
+//! 
+//! 
+
+
 use serde::{Deserialize, Serialize};
 use serde_json;
-use std::fs;
-
 use include_dir::{include_dir, Dir};
 
 const DATA_DIR: Dir = include_dir!("data/restriction_enzymes/enzymedata");
 
 
+
 #[derive(Debug, Serialize, Deserialize)]
-struct RestrictionEnzymeChardata {
+/// RestrictionEnzymeChardata . What is this?
+/// 
+/// [Emboss ](http://rebase.neb.com/rebase/link_emboss_e)
+pub struct RestrictionEnzymeChardata {
     // (3, -3, None, None, "TTATAA"),
-    start: i32,
-    stop: i32,
-    something1: Option<String>,
-    something2: Option<String>,
-    site: String,
+    pub first_5p_cut: i32,
+    pub first_3p_cut: i32,
+    pub second_5p_cut: Option<i32>,
+    pub second_3p_cut: Option<i32>,
+    pub site: String,
 }
 
-// Define the People struct to hold first and last names
+
+/// RestrictionEnzyme 
+/// Derived from Biopython which was drawn in turn from ReBase
 #[derive(Debug, Serialize, Deserialize)]
-struct RestrictionEnzyme {
-    name: String,
-    charac: RestrictionEnzymeChardata,
-    compsite: String,
-    dna: Option<String>,
-    freq: f32,
-    fst3: i32,
-    fst5: i32,
-    id: i32,
-    inact_temp: i32,
-    opt_temp: i32,
-    ovhg: i32,
-    ovhgseq: String,
-    results: Option<String>,
-    scd3: Option<String>,
-    scd5: Option<String>,
-    site: String,
-    size: i32,
-    substrat: String,
-    suppl: Vec<String>,
-    uri: String,
+pub struct RestrictionEnzyme {
+    pub name: String,
+    pub charac: RestrictionEnzymeChardata,
+    pub compsite: String,
+    pub dna: Option<String>,
+    pub freq: f32,
+    pub fst3: i32,
+    pub fst5: i32,
+    pub id: i32,
+    pub inact_temp: i32,
+    pub opt_temp: i32,
+    pub ovhg: i32,
+    pub ovhgseq: String,
+    pub results: Option<String>,
+    pub scd3: Option<i32>,
+    pub scd5: Option<i32>,
+    pub site: String,
+    pub size: i32,
+    pub substrat: String,
+    /// REBASE Supplier information for EMBOSS (embossre.sup)
+    /// Format:
+    /// - Code of Supplier<ws>Supplier name
+    /// - B Thermo Fisher Scientific
+    /// - C Minotech Biotechnology
+    /// - E Agilent Technologies
+    /// - I SibEnzyme Ltd.
+    /// - J Nippon Gene Co., Ltd.
+    /// - K Takara Bio Inc.
+    /// - M Roche Applied Science
+    /// - N New England Biolabs
+    /// - O Toyobo Biochemicals
+    /// - Q Molecular Biology Resources - CHIMERx
+    /// - R Promega Corporation
+    /// - S  Sigma Chemical Corporation
+    /// - V Vivantis Technologies
+    /// - X EURx Ltd.
+    /// - Y SinaClon BioScience Co.
+    /// 
+    pub suppl: Vec<String>,
+    pub uri: String,
 }
 
-enum RestrictionEnzymeEnum {
+/// RestrictionEnzymeEnum
+/// Enum of all of the Restriciton Enzymes
+pub enum RestrictionEnzymeEnum {
     Aani,
     Aari,
     Aasi,
@@ -1111,7 +1197,7 @@ enum RestrictionEnzymeEnum {
 }
 
 
-fn load_restrictionenzyme_data(enzyme: RestrictionEnzymeEnum) -> RestrictionEnzyme {
+pub fn load_restrictionenzyme_data(enzyme: RestrictionEnzymeEnum) -> RestrictionEnzyme {
     let filedata = match enzyme {
        RestrictionEnzymeEnum::Aani => DATA_DIR.get_file("Aani.json").unwrap().contents_utf8().unwrap(),
       RestrictionEnzymeEnum::Aari => DATA_DIR.get_file("Aari.json").unwrap().contents_utf8().unwrap(),
@@ -2185,12 +2271,6 @@ fn load_restrictionenzyme_data(enzyme: RestrictionEnzymeEnum) -> RestrictionEnzy
 
 
 
-// fn main() {
-//     let aari = load_restrictionenzyme_data(RestrictionEnzymeEnum::Aari);
-//     println!("aari! {:?}", aari);
-// }
-
-
 
 #[cfg(test)]
 mod tests {
@@ -2199,12 +2279,12 @@ mod tests {
     #[test]
     fn test_re_data_loaded() {
         let aari = load_restrictionenzyme_data(RestrictionEnzymeEnum::Aari);
-        println!("aari! {:?}", aari);
+        println!("aari! {:?}", aari);        
         assert_eq!(aari.name, "Aari");
-        assert_eq!(aari.charac.start, 11);
-        assert_eq!(aari.charac.stop, 8);
-        assert_eq!(aari.charac.something1, None);
-        assert_eq!(aari.charac.something2, None);
+        assert_eq!(aari.charac.first_5p_cut, 11);
+        assert_eq!(aari.charac.first_3p_cut, 8);
+        assert_eq!(aari.charac.second_5p_cut, None);
+        assert_eq!(aari.charac.second_3p_cut, None);
         assert_eq!(aari.charac.site, "CACCTGC");
         assert_eq!(aari.compsite, "(?=(?P<AarI>CACCTGC))|(?=(?P<AarI_as>GCAGGTG))");
         assert_eq!(aari.dna, None);
@@ -2226,3 +2306,4 @@ mod tests {
         assert_eq!(aari.uri, "https://identifiers.org/rebase:2892");
             }
 }
+
