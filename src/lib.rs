@@ -63,22 +63,9 @@ use serde::{Deserialize, Serialize};
 use serde_json;
 use include_dir::{include_dir, Dir};
 
+
 const DATA_DIR: Dir = include_dir!("data/restriction_enzymes/enzymedata");
 
-
-
-#[derive(Debug, Serialize, Deserialize)]
-/// RestrictionEnzymeChardata . What is this?
-/// 
-/// [Emboss ](http://rebase.neb.com/rebase/link_emboss_e)
-pub struct RestrictionEnzymeChardata {
-    // (3, -3, None, None, "TTATAA"),
-    pub first_5p_cut: i32,
-    pub first_3p_cut: i32,
-    pub second_5p_cut: Option<i32>,
-    pub second_3p_cut: Option<i32>,
-    pub site: String,
-}
 
 
 /// RestrictionEnzyme 
@@ -86,7 +73,6 @@ pub struct RestrictionEnzymeChardata {
 #[derive(Debug, Serialize, Deserialize)]
 pub struct RestrictionEnzyme {
     pub name: String,
-    pub charac: RestrictionEnzymeChardata,
     pub compsite: String,
     pub dna: Option<String>,
     pub freq: f32,
@@ -2281,11 +2267,6 @@ mod tests {
         let aari = load_restrictionenzyme_data(RestrictionEnzymeEnum::Aari);
         println!("aari! {:?}", aari);        
         assert_eq!(aari.name, "Aari");
-        assert_eq!(aari.charac.first_5p_cut, 11);
-        assert_eq!(aari.charac.first_3p_cut, 8);
-        assert_eq!(aari.charac.second_5p_cut, None);
-        assert_eq!(aari.charac.second_3p_cut, None);
-        assert_eq!(aari.charac.site, "CACCTGC");
         assert_eq!(aari.compsite, "(?=(?P<AarI>CACCTGC))|(?=(?P<AarI_as>GCAGGTG))");
         assert_eq!(aari.dna, None);
         assert_eq!(aari.freq, 16384.0);
@@ -2304,6 +2285,30 @@ mod tests {
         assert_eq!(aari.substrat, "DNA");
         assert_eq!(aari.suppl, ["B"]);
         assert_eq!(aari.uri, "https://identifiers.org/rebase:2892");
-            }
-}
+    }
 
+    #[test]
+    fn test_re_data_loaded_2() {
+        let zsp2i = load_restrictionenzyme_data(RestrictionEnzymeEnum::Zsp2i);
+        println!("zsp2i! {:?}", zsp2i);        
+        assert_eq!(zsp2i.name, "Zsp2i");
+        assert_eq!(zsp2i.compsite, "(?=(?P<Zsp2I>ATGCAT))");
+        assert_eq!(zsp2i.dna, None);
+        assert_eq!(zsp2i.freq, 4096.0);
+        assert_eq!(zsp2i.fst3, -5);
+        assert_eq!(zsp2i.fst5, 5);
+        assert_eq!(zsp2i.id, 2156);
+        assert_eq!(zsp2i.inact_temp, 65);
+        assert_eq!(zsp2i.opt_temp, 37);
+        assert_eq!(zsp2i.ovhg, 4);
+        assert_eq!(zsp2i.ovhgseq, "TGCA");
+        assert_eq!(zsp2i.results, None);
+        assert_eq!(zsp2i.scd3, None);
+        assert_eq!(zsp2i.scd5, None);
+        assert_eq!(zsp2i.site, "ATGCAT");
+        assert_eq!(zsp2i.size, 6);
+        assert_eq!(zsp2i.substrat, "DNA");
+        assert_eq!(zsp2i.suppl, ["I", "V"]);
+        assert_eq!(zsp2i.uri, "https://identifiers.org/rebase:2156");
+    }
+}

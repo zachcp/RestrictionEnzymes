@@ -16,6 +16,8 @@ def camelcase(name):
 for idx, (re_name, re_content) in enumerate(Restriction.Restriction_Dictionary.rest_dict.items()):
         #if idx < 4:
             safename = camelcase(re_name)
+            print(re_content.keys())
+            del(re_content['charac']) # this is a duplicate set of fileds. removing it make things simple
             with open(f"data/restriction_enzymes/enzymedata/{safename}.json", "w") as fout:
                     re_content['name'] = safename
                     json.dump(re_content, fout)
