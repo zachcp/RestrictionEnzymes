@@ -72,26 +72,41 @@ const DATA_DIR: Dir = include_dir!("data/restriction_enzymes/enzymedata");
 /// Derived from Biopython which was drawn in turn from ReBase
 #[derive(Debug, Serialize, Deserialize)]
 pub struct RestrictionEnzyme {
+    /// Enzyme Name, E.g. for Ecori:  "Ecori"
     pub name: String,
+    /// E.g. for Ecori:  "(?=(?P<EcoRI>GAATTC))"
     pub compsite: String,
+    /// Hmmm..... not sure.
     pub dna: Option<String>,
+    /// Hmmm..... not sure.
     pub freq: f32,
+    /// First 3' Cut
     pub fst3: i32,
+    /// First 5' Cut
     pub fst5: i32,
+    /// Rebase Identifier
     pub id: i32,
+    /// Inactivation Temperature
     pub inact_temp: i32,
+    /// Optimal Temperature
     pub opt_temp: i32,
+    /// Overhang Size
     pub ovhg: i32,
+    /// Overhang Sequence
     pub ovhgseq: String,
+    /// Hmmm..... not sure.
     pub results: Option<String>,
+    /// Second 3' Cut
     pub scd3: Option<i32>,
+    /// Second 5' Cut
     pub scd5: Option<i32>,
+    /// Genomic Site. The recognition pattern
     pub site: String,
+    /// Size of the recognition site
     pub size: i32,
+    /// Substrate. Usually "DNA"
     pub substrat: String,
-    /// REBASE Supplier information for EMBOSS (embossre.sup)
-    /// Format:
-    /// - Code of Supplier<ws>Supplier name
+    /// ## REBASE Supplier information for EMBOSS (embossre.sup)
     /// - B Thermo Fisher Scientific
     /// - C Minotech Biotechnology
     /// - E Agilent Technologies
@@ -112,8 +127,9 @@ pub struct RestrictionEnzyme {
     pub uri: String,
 }
 
-/// RestrictionEnzymeEnum
-/// Enum of all of the Restriciton Enzymes
+
+/// Enum of all of the Restriction Enzymes
+/// Can be used to identify specific REs. 
 pub enum RestrictionEnzymeEnum {
     Aani,
     Aari,
@@ -1182,7 +1198,11 @@ pub enum RestrictionEnzymeEnum {
     Zsp2i,
 }
 
-
+/// Primary way to access the restriction enzyme data.
+/// Use the ENUM to retrieve a specific RestrictionEnzyme instance.
+/// 
+/// Example:  let ecori = load_restrictionenzyme_data(RestrictionEnzymeEnum::Ecori);
+       
 pub fn load_restrictionenzyme_data(enzyme: RestrictionEnzymeEnum) -> RestrictionEnzyme {
     let filedata = match enzyme {
        RestrictionEnzymeEnum::Aani => DATA_DIR.get_file("Aani.json").unwrap().contents_utf8().unwrap(),
