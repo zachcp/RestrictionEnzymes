@@ -43,7 +43,9 @@
 use serde::{Deserialize, Serialize};
 use serde_json;
 use include_dir::{include_dir, Dir};
-use std::fmt::{self, Debug, Display};
+use std::fmt::{self, Debug};
+use enum_iterator::{all, cardinality, first, last, next, previous, reverse_all, Sequence};
+
 
 const DATA_DIR: Dir = include_dir!("data/restriction_enzymes/enzymedata");
 
@@ -107,10 +109,25 @@ pub struct RestrictionEnzyme {
     pub uri: String,
 }
 
+impl RestrictionEnzyme {
+    fn reverse_site(&self) -> String {
+        self.site.chars().rev().collect()
+    }
+    
+    pub fn is_palindrome(&self) -> bool {
+        &self.site == &self.reverse_site()
+    }
+
+    pub fn leaves_overhang() {
+    }
+
+
+    
+}
 
 /// Enum of all of the Restriction Enzymes
 /// Can be used to identify specific REs. 
-#[derive(Debug)]
+#[derive(Debug, Sequence)]
 pub enum RestrictionEnzymeEnum {
     /// Aasi
     Aani,
@@ -1182,11 +1199,8 @@ pub enum RestrictionEnzymeEnum {
     Zsp2i,
 }
 
-/// Primary way to access the restriction enzyme data.
-/// Use the ENUM to retrieve a specific RestrictionEnzyme instance.
-/// 
-/// Example:  let ecori = load_restrictionenzyme_data(RestrictionEnzymeEnum::Ecori);
 
+// this is needed to get ENUMs as strings
 impl fmt::Display for RestrictionEnzymeEnum {
     fn fmt(&self, f: &mut fmt::Formatter) -> fmt::Result {
         fmt::Debug::fmt(&self, f)
@@ -1206,6 +1220,12 @@ impl RestrictionEnzymeEnum {
 #[cfg(test)]
 mod tests {
     use super::*;
+
+    #[test]
+    fn test_cardinality() {
+        assert_eq!(cardinality::<RestrictionEnzymeEnum>(), 1065);
+    }
+
 
     #[test]
     fn test_re_data_loaded() {
@@ -1255,5 +1275,19 @@ mod tests {
         assert_eq!(zsp2i.substrat, "DNA");
         assert_eq!(zsp2i.suppl, ["I", "V"]);
         assert_eq!(zsp2i.uri, "https://identifiers.org/rebase:2156");
+    }
+
+    fn test_restriction_enzyme_fns() {
+        let zsp2i= RestrictionEnzymeEnum::Zsp2i.value();
+        assert_eq!(zsp2i.site, "ATGCAT");
+        assert_eq!(zsp2i.reverse_site(), "TACGTA");
+        assert_ne!(zsp2i.site,  zsp2i.reverse_site());
+
+        let ecori= RestrictionEnzymeEnum::Ecori.value();
+        assert_eq!(ecori.site, "GAATTC");
+        assert_eq!(ecori.reverse_site(), "GAATTC");
+        assert_eq!(ecori.site,  ecori.reverse_site());
+        
+
     }
 }
