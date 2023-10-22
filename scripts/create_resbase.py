@@ -44,17 +44,17 @@ with open(f"data/restriction_enzymes/enum.txt", "w") as fout:
 #         Person::Bob => "data/people/bob.json",
 #         // Add more cases as needed
 #     };
-with open(f"data/restriction_enzymes/load_all_fn.txt", "w") as fout:
-    fout.write("fn load_restrictionenzyme_data(enzyme: RestrictionEnzymeEnum) -> RestrictionEnzyme {\n ")
-    fout.write("    let filedata = match enzyme {\n ")
-    for idx, (re_name, re_content) in enumerate(Restriction.Restriction_Dictionary.rest_dict.items()):
-            #if idx < 4:
-                safename = camelcase(re_name)
-                # fout.write(f"       RestrictionEnzymeEnum::{safename} => \"data/restriction_enzymes/enzymedata/{safename}.json\",\n")
-                fout.write(f"       RestrictionEnzymeEnum::{safename} => DATA_DIR.get_file(\"{safename}.json\").unwrap().contents_utf8().unwrap(),\n")
-    fout.write("        };\n")
-    # fout.write("    let json_data = fs::read_to_string(filename).expect(\"Failed to read JSON file\");\n")
-    fout.write("    let redata = serde_json::from_str(&filedata).expect(\"Failed to deserialize JSON data\");\n")
-    fout.write("    redata\n")
-    fout.write("}\n")
+# with open(f"data/restriction_enzymes/load_all_fn.txt", "w") as fout:
+#     fout.write("fn load_restrictionenzyme_data(enzyme: RestrictionEnzymeEnum) -> RestrictionEnzyme {\n ")
+#     fout.write("    let filedata = match enzyme {\n ")
+#     for idx, (re_name, re_content) in enumerate(Restriction.Restriction_Dictionary.rest_dict.items()):
+#             #if idx < 4:
+#                 safename = camelcase(re_name)
+#                 # fout.write(f"       RestrictionEnzymeEnum::{safename} => \"data/restriction_enzymes/enzymedata/{safename}.json\",\n")
+#                 fout.write(f"       RestrictionEnzymeEnum::{safename} => DATA_DIR.get_file(\"{safename}.json\").unwrap().contents_utf8().unwrap(),\n")
+#     fout.write("        };\n")
+#     # fout.write("    let json_data = fs::read_to_string(filename).expect(\"Failed to read JSON file\");\n")
+#     fout.write("    let redata = serde_json::from_str(&filedata).expect(\"Failed to deserialize JSON data\");\n")
+#     fout.write("    redata\n")
+#     fout.write("}\n")
    
