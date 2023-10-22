@@ -118,7 +118,12 @@ impl RestrictionEnzyme {
         &self.site == &self.reverse_site()
     }
 
-    pub fn leaves_overhang() {
+    pub fn is_end_sticky(&self) -> bool {
+        &self.ovhgseq != ""
+    }
+
+    pub fn is_end_blunt(&self) -> bool {
+        &self.ovhgseq == ""
     }
 
 
@@ -1277,6 +1282,7 @@ mod tests {
         assert_eq!(zsp2i.uri, "https://identifiers.org/rebase:2156");
     }
 
+    #[test]
     fn test_restriction_enzyme_fns() {
         let zsp2i= RestrictionEnzymeEnum::Zsp2i.value();
         assert_eq!(zsp2i.site, "ATGCAT");
@@ -1285,9 +1291,12 @@ mod tests {
 
         let ecori= RestrictionEnzymeEnum::Ecori.value();
         assert_eq!(ecori.site, "GAATTC");
-        assert_eq!(ecori.reverse_site(), "GAATTC");
+        assert_eq!(ecori.reverse_site(), "CTTAAG");
         assert_eq!(ecori.site,  ecori.reverse_site());
         
+        let smai= RestrictionEnzymeEnum::Smai.value();
+        assert!(smai.is_end_blunt());
+        assert!(!smai.is_end_sticky());
 
     }
 }
