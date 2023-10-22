@@ -109,6 +109,7 @@ pub struct RestrictionEnzyme {
 
 /// Enum of all of the Restriction Enzymes
 /// Can be used to identify specific REs. 
+#[derive(Debug)]
 pub enum RestrictionEnzymeEnum {
     /// Aasi
     Aani,
@@ -1184,7 +1185,15 @@ pub enum RestrictionEnzymeEnum {
 /// Use the ENUM to retrieve a specific RestrictionEnzyme instance.
 /// 
 /// Example:  let ecori = load_restrictionenzyme_data(RestrictionEnzymeEnum::Ecori);
-       
+
+impl RestrictionEnzymeEnum {
+    pub fn value(&self) ->  RestrictionEnzyme {
+        let rebase_file= DATA_DIR.get_file(format!("{:?}", &self)).unwrap().contents_utf8().unwrap();
+        let redata = serde_json::from_str(&rebase_file).expect("Failed to deserialize JSON data");
+        redata
+    }
+
+}
 pub fn load_restrictionenzyme_data(enzyme: RestrictionEnzymeEnum) -> RestrictionEnzyme {
     let filedata = match enzyme {
        RestrictionEnzymeEnum::Aani => DATA_DIR.get_file("Aani.json").unwrap().contents_utf8().unwrap(),
@@ -2263,6 +2272,33 @@ pub fn load_restrictionenzyme_data(enzyme: RestrictionEnzymeEnum) -> Restriction
 #[cfg(test)]
 mod tests {
     use super::*;
+
+
+    #[test]
+    fn test_re_data_newloaad() {
+        let aari= RestrictionEnzymeEnum::Aari.value();
+        assert_eq!(aari.name, "Aari");
+        assert_eq!(aari.compsite, "(?=(?P<AarI>CACCTGC))|(?=(?P<AarI_as>GCAGGTG))");
+        assert_eq!(aari.dna, None);
+        assert_eq!(aari.freq, 16384.0);
+        assert_eq!(aari.fst3, 8);
+        assert_eq!(aari.fst5, 11);
+        assert_eq!(aari.id, 2892);
+        assert_eq!(aari.inact_temp, 65);
+        assert_eq!(aari.opt_temp, 37);
+        assert_eq!(aari.ovhg, -4);
+        assert_eq!(aari.ovhgseq, "NNNN");
+        assert_eq!(aari.results, None);
+        assert_eq!(aari.scd3, None);
+        assert_eq!(aari.scd5, None);
+        assert_eq!(aari.site, "CACCTGC");
+        assert_eq!(aari.size, 7);
+        assert_eq!(aari.substrat, "DNA");
+        assert_eq!(aari.suppl, ["B"]);
+        assert_eq!(aari.uri, "https://identifiers.org/rebase:2892");
+
+    }
+
 
     #[test]
     fn test_re_data_loaded() {
