@@ -110,8 +110,11 @@ pub struct RestrictionEnzyme {
 /// Enum of all of the Restriction Enzymes
 /// Can be used to identify specific REs. 
 pub enum RestrictionEnzymeEnum {
+    /// Aasi
     Aani,
+    /// Aasi
     Aari,
+    /// Aasi
     Aasi,
     Aatii,
     Aba13301i,
