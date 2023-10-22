@@ -65,6 +65,16 @@ pub fn complement(base: char) -> char {
         'T' => 'A',
         'G' => 'C',
         'N' => 'N',
+        'Y' => 'R',
+        'R' => 'Y',
+        'S' => 'S',
+        'W' => 'W',
+        'K' => 'M',
+        'M' => 'K',
+        'V' => 'B',
+        'B' => 'V',
+        'D' => 'H',
+        'H' => 'D',
         // Todo 
         _ => 'X'
     }
@@ -86,9 +96,9 @@ pub struct RestrictionEnzyme {
     /// Hmmm..... not sure.
     pub freq: f32,
     /// First 3' Cut
-    pub fst3: i32,
+    pub fst3: Option<i32>,
     /// First 5' Cut
-    pub fst5: i32,
+    pub fst5: Option<i32>,
     /// Rebase Identifier
     pub id: i32,
     /// Inactivation Temperature
@@ -96,9 +106,9 @@ pub struct RestrictionEnzyme {
     /// Optimal Temperature
     pub opt_temp: i32,
     /// Overhang Size
-    pub ovhg: i32,
+    pub ovhg: Option<i32>,
     /// Overhang Sequence
-    pub ovhgseq: String,
+    pub ovhgseq: Option<String>,
     /// Hmmm..... not sure.
     pub results: Option<String>,
     /// Second 3' Cut
@@ -146,11 +156,11 @@ impl RestrictionEnzyme {
     }
 
     pub fn is_end_sticky(&self) -> bool {
-        &self.ovhgseq != ""
+        &self.ovhgseq.clone().unwrap() != ""
     }
 
     pub fn is_end_blunt(&self) -> bool {
-        &self.ovhgseq == ""
+        &self.ovhgseq.clone().unwrap() == ""
     }
 
 
@@ -593,7 +603,7 @@ pub enum RestrictionEnzymeEnum {
     Cstmi,
     Cviaii,
     Cviji,
-    Cviki1,
+    // Cviki1,
     Cviqi,
     Cviri,
     Dde51507i,
@@ -753,14 +763,14 @@ pub enum RestrictionEnzymeEnum {
     Hpy99i,
     Hpy99xiii,
     Hpy99xiv,
-    Hpy99xivMut1,
+    // Hpy99xivMut1,
     Hpy99xxii,
     Hpyas001vi,
     Hpyav,
     Hpyaxiv,
     Hpyaxviii,
-    HpyaxviMut1,
-    HpyaxviMut2,
+    // HpyaxviMut1,
+    // HpyaxviMut2,
     Hpych4iii,
     Hpych4iv,
     Hpych4v,
@@ -770,7 +780,7 @@ pub enum RestrictionEnzymeEnum {
     Hpypu007xix,
     Hpyse526i,
     Hpyum032xiii,
-    Hpyum032xiiiMut1,
+    // Hpyum032xiiiMut1,
     Hpyum032xiv,
     Hpyum037x,
     Hso63250iv,
@@ -1255,8 +1265,35 @@ mod tests {
 
     #[test]
     fn test_cardinality() {
-        assert_eq!(cardinality::<RestrictionEnzymeEnum>(), 1065);
+        // I've commentsed out 5  JSON files that do not have an ID
+        // assert_eq!(cardinality::<RestrictionEnzymeEnum>(), 1065);
+        assert_eq!(cardinality::<RestrictionEnzymeEnum>(), 1060);
     }
+
+
+
+    #[test]
+    fn test_can_load() {
+        for e in all::<RestrictionEnzymeEnum>() {
+            println!("{:?}", e);
+            let res = e.value();
+            println!("{:?}",res)
+            // res
+        }
+    }
+
+
+
+    #[test]
+    fn test_palindromic() {
+        let mut palindromic: Vec<bool> = vec![];
+        for e in all::<RestrictionEnzymeEnum>() {
+            let res = e.value();
+            palindromic.push(res.is_palindrome())
+        }
+        assert_eq!(palindromic.len(), 1060)
+    }
+
 
 
     #[test]
@@ -1267,13 +1304,13 @@ mod tests {
         assert_eq!(aari.compsite, "(?=(?P<AarI>CACCTGC))|(?=(?P<AarI_as>GCAGGTG))");
         assert_eq!(aari.dna, None);
         assert_eq!(aari.freq, 16384.0);
-        assert_eq!(aari.fst3, 8);
-        assert_eq!(aari.fst5, 11);
+        assert_eq!(aari.fst3.unwrap(), 8);
+        assert_eq!(aari.fst5.unwrap(), 11);
         assert_eq!(aari.id, 2892);
         assert_eq!(aari.inact_temp, 65);
         assert_eq!(aari.opt_temp, 37);
-        assert_eq!(aari.ovhg, -4);
-        assert_eq!(aari.ovhgseq, "NNNN");
+        assert_eq!(aari.ovhg.unwrap(), -4);
+        assert_eq!(aari.ovhgseq.unwrap(), "NNNN");
         assert_eq!(aari.results, None);
         assert_eq!(aari.scd3, None);
         assert_eq!(aari.scd5, None);
@@ -1292,13 +1329,13 @@ mod tests {
         assert_eq!(zsp2i.compsite, "(?=(?P<Zsp2I>ATGCAT))");
         assert_eq!(zsp2i.dna, None);
         assert_eq!(zsp2i.freq, 4096.0);
-        assert_eq!(zsp2i.fst3, -5);
-        assert_eq!(zsp2i.fst5, 5);
+        assert_eq!(zsp2i.fst3.unwrap(), -5);
+        assert_eq!(zsp2i.fst5.unwrap(), 5);
         assert_eq!(zsp2i.id, 2156);
         assert_eq!(zsp2i.inact_temp, 65);
         assert_eq!(zsp2i.opt_temp, 37);
-        assert_eq!(zsp2i.ovhg, 4);
-        assert_eq!(zsp2i.ovhgseq, "TGCA");
+        assert_eq!(zsp2i.ovhg.unwrap(), 4);
+        assert_eq!(zsp2i.ovhgseq.unwrap(), "TGCA");
         assert_eq!(zsp2i.results, None);
         assert_eq!(zsp2i.scd3, None);
         assert_eq!(zsp2i.scd5, None);
@@ -1325,6 +1362,7 @@ mod tests {
         let smai= RestrictionEnzymeEnum::Smai.value();
         assert!(smai.is_end_blunt());
         assert!(!smai.is_end_sticky());
-
     }
+
+
 }
