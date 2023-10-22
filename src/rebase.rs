@@ -50,6 +50,29 @@ use enum_iterator::{all, cardinality, first, last, next, previous, reverse_all, 
 const DATA_DIR: Dir = include_dir!("data/restriction_enzymes/enzymedata");
 
 
+
+/// https://github.com/rust-bio/rust-bio/blob/master/src/alphabets/dna.rs#L66
+#[inline]
+pub fn complement(base: char) -> char {
+    match base {
+        'a' => 't',
+        'c' => 'g',
+        't' => 'a',
+        'g' => 'c',
+        'n' => 't',
+        'A' => 'T',
+        'C' => 'G',
+        'T' => 'A',
+        'G' => 'C',
+        'N' => 'N',
+        // Todo 
+        _ => 'X'
+    }
+}
+
+
+
+
 /// RestrictionEnzyme 
 /// Derived from Biopython which was drawn in turn from ReBase
 #[derive(Debug, Serialize, Deserialize)]
@@ -114,6 +137,10 @@ impl RestrictionEnzyme {
         self.site.chars().rev().collect()
     }
     
+    fn reverse_complement_site(&self) -> String {
+        self.site.chars().rev().map(|base| {complement(base)}).collect()
+    }
+
     pub fn is_palindrome(&self) -> bool {
         &self.site == &self.reverse_site()
     }
@@ -1287,12 +1314,13 @@ mod tests {
         let zsp2i= RestrictionEnzymeEnum::Zsp2i.value();
         assert_eq!(zsp2i.site, "ATGCAT");
         assert_eq!(zsp2i.reverse_site(), "TACGTA");
-        assert_ne!(zsp2i.site,  zsp2i.reverse_site());
+        assert_eq!(zsp2i.site,  zsp2i.reverse_complement_site());
 
         let ecori= RestrictionEnzymeEnum::Ecori.value();
         assert_eq!(ecori.site, "GAATTC");
         assert_eq!(ecori.reverse_site(), "CTTAAG");
-        assert_eq!(ecori.site,  ecori.reverse_site());
+        assert_eq!(ecori.site,  ecori.reverse_complement_site());
+        
         
         let smai= RestrictionEnzymeEnum::Smai.value();
         assert!(smai.is_end_blunt());
