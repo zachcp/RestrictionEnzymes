@@ -90,37 +90,37 @@ pub struct RestrictionEnzyme {
     /// Enzyme Name, E.g. for Ecori:  "Ecori"
     pub name: String,
     /// E.g. for Ecori:  "(?=(?P<EcoRI>GAATTC))"
-    pub compsite: String,
+    compsite: String,
     /// Hmmm..... not sure.
-    pub dna: Option<String>,
+    dna: Option<String>,
     /// Hmmm..... not sure.
-    pub freq: f32,
+    freq: f32,
     /// First 3' Cut
-    pub fst3: Option<i32>,
+    fst3: Option<i32>,
     /// First 5' Cut
-    pub fst5: Option<i32>,
+    fst5: Option<i32>,
     /// Rebase Identifier
-    pub id: i32,
+    id: i32,
     /// Inactivation Temperature
-    pub inact_temp: i32,
+    inact_temp: i32,
     /// Optimal Temperature
-    pub opt_temp: i32,
+    opt_temp: i32,
     /// Overhang Size
-    pub ovhg: Option<i32>,
+    ovhg: Option<i32>,
     /// Overhang Sequence
-    pub ovhgseq: Option<String>,
+    ovhgseq: Option<String>,
     /// Hmmm..... not sure.
-    pub results: Option<String>,
+    results: Option<String>,
     /// Second 3' Cut
-    pub scd3: Option<i32>,
+    scd3: Option<i32>,
     /// Second 5' Cut
-    pub scd5: Option<i32>,
+    scd5: Option<i32>,
     /// Genomic Site. The recognition pattern
-    pub site: String,
+    site: String,
     /// Size of the recognition site
-    pub size: i32,
+    size: i32,
     /// Substrate. Usually "DNA"
-    pub substrat: String,
+    substrat: String,
     /// ## REBASE Supplier information for EMBOSS (embossre.sup)
     /// - B Thermo Fisher Scientific
     /// - C Minotech Biotechnology
@@ -143,16 +143,17 @@ pub struct RestrictionEnzyme {
 }
 
 impl RestrictionEnzyme {
+
     fn reverse_site(&self) -> String {
         self.site.chars().rev().collect()
     }
     
-    fn reverse_complement_site(&self) -> String {
+    pub fn reverse_complement_site(&self) -> String {
         self.site.chars().rev().map(|base| {complement(base)}).collect()
     }
 
     pub fn is_palindrome(&self) -> bool {
-        &self.site == &self.reverse_site()
+        &self.site == &self.reverse_complement_site()
     }
 
     pub fn is_end_sticky(&self) -> bool {
