@@ -1,0 +1,1 @@
+{"compsite": "(?=(?P<RpaB5I>CG[AG]GGAC))|(?=(?P<RpaB5I_as>GTCC[CT]CG))", "dna": null, "freq": 8192.0, "fst3": 18, "fst5": 27, "id": 17116, "inact_temp": 65, "opt_temp": 37, "ovhg": 2, "ovhgseq": "NN", "results": null, "scd3": null, "scd5": null, "site": "CGRGGAC", "size": 7, "substrat": "DNA", "suppl": [], "uri": "https://identifiers.org/rebase:17116", "name": "Rpab5i"}

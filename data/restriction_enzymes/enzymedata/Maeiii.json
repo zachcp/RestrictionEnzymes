@@ -1,0 +1,1 @@
+{"compsite": "(?=(?P<MaeIII>GT.AC))", "dna": null, "freq": 256.0, "fst3": 0, "fst5": 0, "id": 1199, "inact_temp": 65, "opt_temp": 37, "ovhg": -5, "ovhgseq": "GTNAC", "results": null, "scd3": null, "scd5": null, "site": "GTNAC", "size": 5, "substrat": "DNA", "suppl": ["M", "S"], "uri": "https://identifiers.org/rebase:1199", "name": "Maeiii"}

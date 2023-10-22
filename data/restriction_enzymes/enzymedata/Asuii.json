@@ -1,0 +1,1 @@
+{"compsite": "(?=(?P<AsuII>TTCGAA))", "dna": null, "freq": 4096.0, "fst3": -2, "fst5": 2, "id": 154, "inact_temp": 65, "opt_temp": 37, "ovhg": -2, "ovhgseq": "CG", "results": null, "scd3": null, "scd5": null, "site": "TTCGAA", "size": 6, "substrat": "DNA", "suppl": ["C"], "uri": "https://identifiers.org/rebase:154", "name": "Asuii"}

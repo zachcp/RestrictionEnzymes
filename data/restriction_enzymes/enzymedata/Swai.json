@@ -1,0 +1,1 @@
+{"compsite": "(?=(?P<SwaI>ATTTAAAT))", "dna": null, "freq": 65536.0, "fst3": -4, "fst5": 4, "id": 1798, "inact_temp": 65, "opt_temp": 37, "ovhg": 0, "ovhgseq": "", "results": null, "scd3": null, "scd5": null, "site": "ATTTAAAT", "size": 8, "substrat": "DNA", "suppl": ["J", "M", "N", "S"], "uri": "https://identifiers.org/rebase:1798", "name": "Swai"}

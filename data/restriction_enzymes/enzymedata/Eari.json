@@ -1,0 +1,1 @@
+{"compsite": "(?=(?P<EarI>CTCTTC))|(?=(?P<EarI_as>GAAGAG))", "dna": null, "freq": 4096.0, "fst3": 4, "fst5": 7, "id": 807, "inact_temp": 65, "opt_temp": 37, "ovhg": -3, "ovhgseq": "NNN", "results": null, "scd3": null, "scd5": null, "site": "CTCTTC", "size": 6, "substrat": "DNA", "suppl": ["N"], "uri": "https://identifiers.org/rebase:807", "name": "Eari"}

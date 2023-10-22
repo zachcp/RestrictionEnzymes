@@ -1,0 +1,1 @@
+{"compsite": "(?=(?P<AloI>GAAC......TCC))|(?=(?P<AloI_as>GGA......GTTC))", "dna": null, "freq": 16384.0, "fst3": -25, "fst5": -7, "id": 2812, "inact_temp": 65, "opt_temp": 37, "ovhg": 5, "ovhgseq": "NNNNN", "results": null, "scd3": 7, "scd5": 25, "site": "GAACNNNNNNTCC", "size": 13, "substrat": "DNA", "suppl": ["B"], "uri": "https://identifiers.org/rebase:2812", "name": "Aloi"}

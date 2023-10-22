@@ -1,0 +1,1 @@
+{"compsite": "(?=(?P<BseAI>TCCGGA))", "dna": null, "freq": 4096.0, "fst3": -1, "fst5": 1, "id": 339, "inact_temp": 65, "opt_temp": 37, "ovhg": -4, "ovhgseq": "CCGG", "results": null, "scd3": null, "scd5": null, "site": "TCCGGA", "size": 6, "substrat": "DNA", "suppl": ["C"], "uri": "https://identifiers.org/rebase:339", "name": "Bseai"}

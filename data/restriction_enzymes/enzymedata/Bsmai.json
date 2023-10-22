@@ -1,0 +1,1 @@
+{"compsite": "(?=(?P<BsmAI>GTCTC))|(?=(?P<BsmAI_as>GAGAC))", "dna": null, "freq": 1024.0, "fst3": 5, "fst5": 6, "id": 387, "inact_temp": 65, "opt_temp": 37, "ovhg": -4, "ovhgseq": "NNNN", "results": null, "scd3": null, "scd5": null, "site": "GTCTC", "size": 5, "substrat": "DNA", "suppl": ["N"], "uri": "https://identifiers.org/rebase:387", "name": "Bsmai"}

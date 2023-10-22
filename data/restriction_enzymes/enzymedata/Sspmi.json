@@ -1,0 +1,1 @@
+{"compsite": "(?=(?P<SspMI>CTAG))", "dna": null, "freq": 256.0, "fst3": -1, "fst5": 1, "id": 102129, "inact_temp": 65, "opt_temp": 37, "ovhg": -2, "ovhgseq": "TA", "results": null, "scd3": null, "scd5": null, "site": "CTAG", "size": 4, "substrat": "DNA", "suppl": ["I"], "uri": "https://identifiers.org/rebase:102129", "name": "Sspmi"}

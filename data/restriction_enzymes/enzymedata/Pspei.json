@@ -1,0 +1,1 @@
+{"compsite": "(?=(?P<PspEI>GGT.ACC))", "dna": null, "freq": 4096.0, "fst3": -1, "fst5": 1, "id": 2681, "inact_temp": 65, "opt_temp": 37, "ovhg": -5, "ovhgseq": "GTNAC", "results": null, "scd3": null, "scd5": null, "site": "GGTNACC", "size": 7, "substrat": "DNA", "suppl": ["I", "V"], "uri": "https://identifiers.org/rebase:2681", "name": "Pspei"}

@@ -1,0 +1,1 @@
+{"compsite": "(?=(?P<BfuI>GTATCC))|(?=(?P<BfuI_as>GGATAC))", "dna": null, "freq": 4096.0, "fst3": 5, "fst5": 12, "id": 4107, "inact_temp": 65, "opt_temp": 37, "ovhg": 1, "ovhgseq": "N", "results": null, "scd3": null, "scd5": null, "site": "GTATCC", "size": 6, "substrat": "DNA", "suppl": ["B"], "uri": "https://identifiers.org/rebase:4107", "name": "Bfui"}

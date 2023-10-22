@@ -1,0 +1,1 @@
+{"compsite": "(?=(?P<RlaII>ACACAG))|(?=(?P<RlaII_as>CTGTGT))", "dna": null, "freq": 4096.0, "fst3": 18, "fst5": 26, "id": 24516, "inact_temp": 65, "opt_temp": 37, "ovhg": 2, "ovhgseq": "NN", "results": null, "scd3": null, "scd5": null, "site": "ACACAG", "size": 6, "substrat": "DNA", "suppl": [], "uri": "https://identifiers.org/rebase:24516", "name": "Rlaii"}

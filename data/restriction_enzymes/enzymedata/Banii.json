@@ -1,0 +1,1 @@
+{"compsite": "(?=(?P<BanII>G[AG]GC[CT]C))", "dna": null, "freq": 1024.0, "fst3": -5, "fst5": 5, "id": 191, "inact_temp": 65, "opt_temp": 37, "ovhg": 4, "ovhgseq": "RGCY", "results": null, "scd3": null, "scd5": null, "site": "GRGCYC", "size": 6, "substrat": "DNA", "suppl": ["K", "N", "X"], "uri": "https://identifiers.org/rebase:191", "name": "Banii"}

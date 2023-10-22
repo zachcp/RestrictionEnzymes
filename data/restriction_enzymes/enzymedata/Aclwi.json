@@ -1,0 +1,1 @@
+{"compsite": "(?=(?P<AclWI>GGATC))|(?=(?P<AclWI_as>GATCC))", "dna": null, "freq": 1024.0, "fst3": 5, "fst5": 9, "id": 2668, "inact_temp": 65, "opt_temp": 37, "ovhg": -1, "ovhgseq": "N", "results": null, "scd3": null, "scd5": null, "site": "GGATC", "size": 5, "substrat": "DNA", "suppl": ["I"], "uri": "https://identifiers.org/rebase:2668", "name": "Aclwi"}

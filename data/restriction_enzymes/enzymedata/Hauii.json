@@ -1,0 +1,1 @@
+{"compsite": "(?=(?P<HauII>TGGCCA))", "dna": null, "freq": 4096.0, "fst3": 9, "fst5": 17, "id": 20893, "inact_temp": 65, "opt_temp": 37, "ovhg": 2, "ovhgseq": "NN", "results": null, "scd3": null, "scd5": null, "site": "TGGCCA", "size": 6, "substrat": "DNA", "suppl": [], "uri": "https://identifiers.org/rebase:20893", "name": "Hauii"}

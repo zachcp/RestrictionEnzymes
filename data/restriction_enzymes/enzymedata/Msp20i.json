@@ -1,0 +1,1 @@
+{"compsite": "(?=(?P<Msp20I>TGGCCA))", "dna": null, "freq": 4096.0, "fst3": -3, "fst5": 3, "id": 2597, "inact_temp": 65, "opt_temp": 37, "ovhg": 0, "ovhgseq": "", "results": null, "scd3": null, "scd5": null, "site": "TGGCCA", "size": 6, "substrat": "DNA", "suppl": ["V"], "uri": "https://identifiers.org/rebase:2597", "name": "Msp20i"}

@@ -1,0 +1,1 @@
+{"compsite": "(?=(?P<SfaNI>GCATC))|(?=(?P<SfaNI_as>GATGC))", "dna": null, "freq": 1024.0, "fst3": 9, "fst5": 10, "id": 1652, "inact_temp": 65, "opt_temp": 37, "ovhg": -4, "ovhgseq": "NNNN", "results": null, "scd3": null, "scd5": null, "site": "GCATC", "size": 5, "substrat": "DNA", "suppl": ["I", "N", "V"], "uri": "https://identifiers.org/rebase:1652", "name": "Sfani"}

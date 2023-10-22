@@ -1,0 +1,1 @@
+{"compsite": "(?=(?P<NmeDI>[AG]CCGG[CT]))", "dna": null, "freq": 1024.0, "fst3": -13, "fst5": -12, "id": 4187, "inact_temp": 65, "opt_temp": 37, "ovhg": -5, "ovhgseq": "NNNNN", "results": null, "scd3": 12, "scd5": 13, "site": "RCCGGY", "size": 6, "substrat": "DNA", "suppl": [], "uri": "https://identifiers.org/rebase:4187", "name": "Nmedi"}

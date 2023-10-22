@@ -1,0 +1,1 @@
+{"compsite": "(?=(?P<Mva1269I>GAATGC))|(?=(?P<Mva1269I_as>GCATTC))", "dna": null, "freq": 4096.0, "fst3": -1, "fst5": 7, "id": 1992, "inact_temp": 65, "opt_temp": 37, "ovhg": 2, "ovhgseq": "CN", "results": null, "scd3": null, "scd5": null, "site": "GAATGC", "size": 6, "substrat": "DNA", "suppl": ["B"], "uri": "https://identifiers.org/rebase:1992", "name": "Mva1269i"}

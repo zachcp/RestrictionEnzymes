@@ -1,0 +1,1 @@
+{"compsite": "(?=(?P<Bsp24I>GAC......TGG))|(?=(?P<Bsp24I_as>CCA......GTC))", "dna": null, "freq": 4096.0, "fst3": -25, "fst5": -8, "id": 2437, "inact_temp": 65, "opt_temp": 37, "ovhg": 5, "ovhgseq": "NNNNN", "results": null, "scd3": 7, "scd5": 24, "site": "GACNNNNNNTGG", "size": 12, "substrat": "DNA", "suppl": [], "uri": "https://identifiers.org/rebase:2437", "name": "Bsp24i"}

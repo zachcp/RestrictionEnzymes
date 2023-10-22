@@ -1,0 +1,1 @@
+{"compsite": "(?=(?P<CjeNIII>G[GT]AA[CT]G))|(?=(?P<CjeNIII_as>C[AG]TT[AC]C))", "dna": null, "freq": 1024.0, "fst3": 17, "fst5": 25, "id": 4511, "inact_temp": 65, "opt_temp": 37, "ovhg": 2, "ovhgseq": "NN", "results": null, "scd3": null, "scd5": null, "site": "GKAAYG", "size": 6, "substrat": "DNA", "suppl": [], "uri": "https://identifiers.org/rebase:4511", "name": "Cjeniii"}

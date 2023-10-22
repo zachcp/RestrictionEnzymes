@@ -1,0 +1,1 @@
+{"compsite": "(?=(?P<DrdV>CATG.AC))|(?=(?P<DrdV_as>GT.CATG))", "dna": null, "freq": 4096.0, "fst3": 8, "fst5": 17, "id": 21570, "inact_temp": 65, "opt_temp": 37, "ovhg": 2, "ovhgseq": "NN", "results": null, "scd3": null, "scd5": null, "site": "CATGNAC", "size": 7, "substrat": "DNA", "suppl": [], "uri": "https://identifiers.org/rebase:21570", "name": "Drdv"}

@@ -1,0 +1,1 @@
+{"compsite": "(?=(?P<AccI>GT[AC][GT]AC))", "dna": null, "freq": 1024.0, "fst3": -2, "fst5": 2, "id": 18, "inact_temp": 65, "opt_temp": 37, "ovhg": -2, "ovhgseq": "MK", "results": null, "scd3": null, "scd5": null, "site": "GTMKAC", "size": 6, "substrat": "DNA", "suppl": ["B", "J", "K", "M", "N", "Q", "X"], "uri": "https://identifiers.org/rebase:18", "name": "Acci"}

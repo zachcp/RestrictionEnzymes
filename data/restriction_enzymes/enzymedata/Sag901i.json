@@ -1,0 +1,1 @@
+{"compsite": "(?=(?P<Sag901I>GCAAAT))|(?=(?P<Sag901I_as>ATTTGC))", "dna": null, "freq": 4096.0, "fst3": null, "fst5": null, "id": 283227, "inact_temp": 65, "opt_temp": 37, "ovhg": null, "ovhgseq": null, "results": null, "scd3": null, "scd5": null, "site": "GCAAAT", "size": 6, "substrat": "DNA", "suppl": [], "uri": "https://identifiers.org/rebase:283227", "name": "Sag901i"}

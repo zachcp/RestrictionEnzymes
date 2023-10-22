@@ -1,0 +1,1 @@
+{"compsite": "(?=(?P<HindII>GT[CT][AG]AC))", "dna": null, "freq": 1024.0, "fst3": -3, "fst5": 3, "id": 1150, "inact_temp": 65, "opt_temp": 37, "ovhg": 0, "ovhgseq": "", "results": null, "scd3": null, "scd5": null, "site": "GTYRAC", "size": 6, "substrat": "DNA", "suppl": ["I", "M", "S", "V"], "uri": "https://identifiers.org/rebase:1150", "name": "Hindii"}

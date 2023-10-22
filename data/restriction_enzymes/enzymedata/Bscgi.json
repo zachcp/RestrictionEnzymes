@@ -1,0 +1,1 @@
+{"compsite": "(?=(?P<BscGI>CCCGT))|(?=(?P<BscGI_as>ACGGG))", "dna": null, "freq": 1024.0, "fst3": null, "fst5": null, "id": 2163, "inact_temp": 65, "opt_temp": 37, "ovhg": null, "ovhgseq": null, "results": null, "scd3": null, "scd5": null, "site": "CCCGT", "size": 5, "substrat": "DNA", "suppl": [], "uri": "https://identifiers.org/rebase:2163", "name": "Bscgi"}

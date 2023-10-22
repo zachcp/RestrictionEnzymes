@@ -1,0 +1,1 @@
+{"compsite": "(?=(?P<DriI>GAC.....GTC))", "dna": null, "freq": 4096.0, "fst3": -6, "fst5": 6, "id": 7493, "inact_temp": 65, "opt_temp": 37, "ovhg": 1, "ovhgseq": "N", "results": null, "scd3": null, "scd5": null, "site": "GACNNNNNGTC", "size": 11, "substrat": "DNA", "suppl": ["I"], "uri": "https://identifiers.org/rebase:7493", "name": "Drii"}

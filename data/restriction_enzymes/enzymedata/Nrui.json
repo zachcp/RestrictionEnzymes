@@ -1,0 +1,1 @@
+{"compsite": "(?=(?P<NruI>TCGCGA))", "dna": null, "freq": 4096.0, "fst3": -3, "fst5": 3, "id": 1371, "inact_temp": 65, "opt_temp": 37, "ovhg": 0, "ovhgseq": "", "results": null, "scd3": null, "scd5": null, "site": "TCGCGA", "size": 6, "substrat": "DNA", "suppl": ["B", "C", "I", "J", "K", "M", "N", "Q", "S", "X"], "uri": "https://identifiers.org/rebase:1371", "name": "Nrui"}

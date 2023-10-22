@@ -1,0 +1,1 @@
+{"compsite": "(?=(?P<BcefI>ACGGC))|(?=(?P<BcefI_as>GCCGT))", "dna": null, "freq": 1024.0, "fst3": 13, "fst5": 17, "id": 237, "inact_temp": 65, "opt_temp": 37, "ovhg": -1, "ovhgseq": "N", "results": null, "scd3": null, "scd5": null, "site": "ACGGC", "size": 5, "substrat": "DNA", "suppl": [], "uri": "https://identifiers.org/rebase:237", "name": "Bcefi"}

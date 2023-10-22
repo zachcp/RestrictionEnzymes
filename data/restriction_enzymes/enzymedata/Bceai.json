@@ -1,0 +1,1 @@
+{"compsite": "(?=(?P<BceAI>ACGGC))|(?=(?P<BceAI_as>GCCGT))", "dna": null, "freq": 1024.0, "fst3": 14, "fst5": 17, "id": 4686, "inact_temp": 65, "opt_temp": 37, "ovhg": -2, "ovhgseq": "NN", "results": null, "scd3": null, "scd5": null, "site": "ACGGC", "size": 5, "substrat": "DNA", "suppl": ["N"], "uri": "https://identifiers.org/rebase:4686", "name": "Bceai"}

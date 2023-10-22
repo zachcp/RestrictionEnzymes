@@ -1,0 +1,1 @@
+{"compsite": "(?=(?P<BspTNI>GGTCTC))|(?=(?P<BspTNI_as>GAGACC))", "dna": null, "freq": 4096.0, "fst3": 5, "fst5": 7, "id": 5361, "inact_temp": 65, "opt_temp": 37, "ovhg": -4, "ovhgseq": "NNNN", "results": null, "scd3": null, "scd5": null, "site": "GGTCTC", "size": 6, "substrat": "DNA", "suppl": ["X"], "uri": "https://identifiers.org/rebase:5361", "name": "Bsptni"}

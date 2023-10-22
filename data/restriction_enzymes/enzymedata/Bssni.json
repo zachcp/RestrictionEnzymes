@@ -1,0 +1,1 @@
+{"compsite": "(?=(?P<BssNI>G[AG]CG[CT]C))", "dna": null, "freq": 1024.0, "fst3": -2, "fst5": 2, "id": 10487, "inact_temp": 65, "opt_temp": 37, "ovhg": -2, "ovhgseq": "CG", "results": null, "scd3": null, "scd5": null, "site": "GRCGYC", "size": 6, "substrat": "DNA", "suppl": ["V"], "uri": "https://identifiers.org/rebase:10487", "name": "Bssni"}

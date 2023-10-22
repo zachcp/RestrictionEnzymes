@@ -1,0 +1,1 @@
+{"compsite": "(?=(?P<BscXI>GCAGGC))|(?=(?P<BscXI_as>GCCTGC))", "dna": null, "freq": 4096.0, "fst3": -5, "fst5": 5, "id": 11108, "inact_temp": 65, "opt_temp": 37, "ovhg": 4, "ovhgseq": "CAGG", "results": null, "scd3": null, "scd5": null, "site": "GCAGGC", "size": 6, "substrat": "DNA", "suppl": [], "uri": "https://identifiers.org/rebase:11108", "name": "Bscxi"}

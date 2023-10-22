@@ -1,0 +1,1 @@
+{"compsite": "(?=(?P<Sau3AI>GATC))", "dna": null, "freq": 256.0, "fst3": 0, "fst5": 0, "id": 1604, "inact_temp": 65, "opt_temp": 37, "ovhg": -4, "ovhgseq": "GATC", "results": null, "scd3": null, "scd5": null, "site": "GATC", "size": 4, "substrat": "DNA", "suppl": ["C", "J", "K", "M", "N", "X"], "uri": "https://identifiers.org/rebase:1604", "name": "Sau3ai"}

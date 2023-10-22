@@ -1,0 +1,1 @@
+{"compsite": "(?=(?P<CcrNAIII>CGACCAG))|(?=(?P<CcrNAIII_as>CTGGTCG))", "dna": null, "freq": 16384.0, "fst3": null, "fst5": null, "id": 19984, "inact_temp": 65, "opt_temp": 37, "ovhg": null, "ovhgseq": null, "results": null, "scd3": null, "scd5": null, "site": "CGACCAG", "size": 7, "substrat": "DNA", "suppl": [], "uri": "https://identifiers.org/rebase:19984", "name": "Ccrnaiii"}

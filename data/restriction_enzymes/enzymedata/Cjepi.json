@@ -1,0 +1,1 @@
+{"compsite": "(?=(?P<CjePI>CCA.......TC))|(?=(?P<CjePI_as>GA.......TGG))", "dna": null, "freq": 1024.0, "fst3": -25, "fst5": -7, "id": 2467, "inact_temp": 65, "opt_temp": 37, "ovhg": 6, "ovhgseq": "NNNNNN", "results": null, "scd3": 8, "scd5": 26, "site": "CCANNNNNNNTC", "size": 12, "substrat": "DNA", "suppl": [], "uri": "https://identifiers.org/rebase:2467", "name": "Cjepi"}

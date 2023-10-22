@@ -1,0 +1,1 @@
+{"compsite": "(?=(?P<BaeI>AC....GTA[CT]C))|(?=(?P<BaeI_as>G[AG]TAC....GT))", "dna": null, "freq": 8192.0, "fst3": -26, "fst5": -10, "id": 179, "inact_temp": 65, "opt_temp": 37, "ovhg": 5, "ovhgseq": "NNNNN", "results": null, "scd3": 7, "scd5": 23, "site": "ACNNNNGTAYC", "size": 11, "substrat": "DNA", "suppl": ["N"], "uri": "https://identifiers.org/rebase:179", "name": "Baei"}

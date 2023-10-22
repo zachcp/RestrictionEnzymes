@@ -1,0 +1,1 @@
+{"compsite": "(?=(?P<MluCI>AATT))", "dna": null, "freq": 256.0, "fst3": 0, "fst5": 0, "id": 4630, "inact_temp": 65, "opt_temp": 37, "ovhg": -4, "ovhgseq": "AATT", "results": null, "scd3": null, "scd5": null, "site": "AATT", "size": 4, "substrat": "DNA", "suppl": ["N"], "uri": "https://identifiers.org/rebase:4630", "name": "Mluci"}

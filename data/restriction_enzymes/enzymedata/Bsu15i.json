@@ -1,0 +1,1 @@
+{"compsite": "(?=(?P<Bsu15I>ATCGAT))", "dna": null, "freq": 4096.0, "fst3": -2, "fst5": 2, "id": 608, "inact_temp": 65, "opt_temp": 37, "ovhg": -2, "ovhgseq": "CG", "results": null, "scd3": null, "scd5": null, "site": "ATCGAT", "size": 6, "substrat": "DNA", "suppl": ["B"], "uri": "https://identifiers.org/rebase:608", "name": "Bsu15i"}

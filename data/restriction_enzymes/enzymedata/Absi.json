@@ -1,0 +1,1 @@
+{"compsite": "(?=(?P<AbsI>CCTCGAGG))", "dna": null, "freq": 65536.0, "fst3": -2, "fst5": 2, "id": 14594, "inact_temp": 65, "opt_temp": 37, "ovhg": -4, "ovhgseq": "TCGA", "results": null, "scd3": null, "scd5": null, "site": "CCTCGAGG", "size": 8, "substrat": "DNA", "suppl": ["I"], "uri": "https://identifiers.org/rebase:14594", "name": "Absi"}

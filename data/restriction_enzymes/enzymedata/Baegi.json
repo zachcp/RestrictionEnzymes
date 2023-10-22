@@ -1,0 +1,1 @@
+{"compsite": "(?=(?P<BaeGI>G[GT]GC[AC]C))", "dna": null, "freq": 1024.0, "fst3": -5, "fst5": 5, "id": 16983, "inact_temp": 65, "opt_temp": 37, "ovhg": 4, "ovhgseq": "KGCM", "results": null, "scd3": null, "scd5": null, "site": "GKGCMC", "size": 6, "substrat": "DNA", "suppl": ["N"], "uri": "https://identifiers.org/rebase:16983", "name": "Baegi"}

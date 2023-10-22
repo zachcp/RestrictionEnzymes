@@ -1,0 +1,1 @@
+{"compsite": "(?=(?P<BstMWI>GC.......GC))", "dna": null, "freq": 256.0, "fst3": -7, "fst5": 7, "id": 6223, "inact_temp": 65, "opt_temp": 37, "ovhg": 3, "ovhgseq": "NNN", "results": null, "scd3": null, "scd5": null, "site": "GCNNNNNNNGC", "size": 11, "substrat": "DNA", "suppl": ["I"], "uri": "https://identifiers.org/rebase:6223", "name": "Bstmwi"}

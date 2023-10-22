@@ -1,0 +1,1 @@
+{"compsite": "(?=(?P<NdeI>CATATG))", "dna": null, "freq": 4096.0, "fst3": -2, "fst5": 2, "id": 1312, "inact_temp": 65, "opt_temp": 37, "ovhg": -2, "ovhgseq": "TA", "results": null, "scd3": null, "scd5": null, "site": "CATATG", "size": 6, "substrat": "DNA", "suppl": ["B", "J", "K", "M", "N", "Q", "R", "S", "X"], "uri": "https://identifiers.org/rebase:1312", "name": "Ndei"}

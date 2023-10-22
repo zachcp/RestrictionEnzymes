@@ -1,0 +1,1 @@
+{"compsite": "(?=(?P<BetI>[AT]CCGG[AT]))", "dna": null, "freq": 1024.0, "fst3": -1, "fst5": 1, "id": 255, "inact_temp": 65, "opt_temp": 37, "ovhg": -4, "ovhgseq": "CCGG", "results": null, "scd3": null, "scd5": null, "site": "WCCGGW", "size": 6, "substrat": "DNA", "suppl": [], "uri": "https://identifiers.org/rebase:255", "name": "Beti"}

@@ -1,0 +1,1 @@
+{"compsite": "(?=(?P<RruI>TCGCGA))", "dna": null, "freq": 4096.0, "fst3": -3, "fst5": 3, "id": 17996, "inact_temp": 65, "opt_temp": 37, "ovhg": 0, "ovhgseq": "", "results": null, "scd3": null, "scd5": null, "site": "TCGCGA", "size": 6, "substrat": "DNA", "suppl": ["B"], "uri": "https://identifiers.org/rebase:17996", "name": "Rrui"}

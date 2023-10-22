@@ -1,0 +1,1 @@
+{"compsite": "(?=(?P<RleAI>CCCACA))|(?=(?P<RleAI_as>TGTGGG))", "dna": null, "freq": 4096.0, "fst3": 9, "fst5": 18, "id": 1552, "inact_temp": 65, "opt_temp": 37, "ovhg": 3, "ovhgseq": "NNN", "results": null, "scd3": null, "scd5": null, "site": "CCCACA", "size": 6, "substrat": "DNA", "suppl": [], "uri": "https://identifiers.org/rebase:1552", "name": "Rleai"}
