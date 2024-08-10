@@ -1,15 +1,15 @@
 //! # Restriction Enzyme Data
-//! 
+//!
 //! The data in this package are derived from the [Biopython Restriction Dictionary](https://github.com/biopython/biopython/blob/master/Bio/Restriction/Restriction_Dictionary.py)
 //! which in turn originate from [Rebase](http://rebase.neb.com).
-//! 
+//!
 //! Those seeking to distribute REBASE files with their software packages are welcome to do so, providing it is clear to your users that they are not being charged for the REBASE data. It should be transparent that REBASE is a free and independent resource, with the following bibliographical reference:
 //!  LATEST REVIEW: PDF file...
 //!  Roberts, R.J., Vincze, T., Posfai, J., Macelis, D.
 //!  REBASE-a database for DNA restriction and modification: enzymes, genes and genomes.
 //!  Nucleic Acids Res. 43: D298-D299 (2015).
-//! 
-//!  
+//!
+//!
 //!
 //! name  pattern  len ncuts blunt c1 c2 c3 c4
 //! Where:
@@ -36,20 +36,15 @@
 //! the 5' strand.
 //! Sequences are numbered ... -3 -2 -1 1 2 3 ... with
 //! the first residue of the pattern at base number 1.
-//! 
-//! 
-
-
+//!
+//!
+use enum_iterator::Sequence;
+use include_dir::{include_dir, Dir};
 use serde::{Deserialize, Serialize};
 use serde_json;
-use include_dir::{include_dir, Dir};
 use std::fmt::{self, Debug};
-use enum_iterator::{all, cardinality, first, last, next, previous, reverse_all, Sequence};
-
 
 const DATA_DIR: Dir = include_dir!("data/restriction_enzymes/enzymedata");
-
-
 
 /// https://github.com/rust-bio/rust-bio/blob/master/src/alphabets/dna.rs#L66
 #[inline]
@@ -75,15 +70,12 @@ pub fn complement(base: char) -> char {
         'B' => 'V',
         'D' => 'H',
         'H' => 'D',
-        // Todo 
-        _ => 'X'
+        // Todo
+        _ => 'X',
     }
 }
 
-
-
-
-/// RestrictionEnzyme 
+/// RestrictionEnzyme
 /// Derived from Biopython which was drawn in turn from ReBase
 #[derive(Debug, Serialize, Deserialize)]
 pub struct RestrictionEnzyme {
@@ -137,19 +129,18 @@ pub struct RestrictionEnzyme {
     /// - V Vivantis Technologies
     /// - X EURx Ltd.
     /// - Y SinaClon BioScience Co.
-    /// 
+    ///
     pub suppl: Vec<String>,
     pub uri: String,
 }
 
 impl RestrictionEnzyme {
-
-    fn reverse_site(&self) -> String {
-        self.site.chars().rev().collect()
-    }
-    
     pub fn reverse_complement_site(&self) -> String {
-        self.site.chars().rev().map(|base| {complement(base)}).collect()
+        self.site
+            .chars()
+            .rev()
+            .map(|base| complement(base))
+            .collect()
     }
 
     pub fn is_palindrome(&self) -> bool {
@@ -163,13 +154,10 @@ impl RestrictionEnzyme {
     pub fn is_end_blunt(&self) -> bool {
         &self.ovhgseq.clone().unwrap() == ""
     }
-
-
-    
 }
 
 /// Enum of all of the Restriction Enzymes
-/// Can be used to identify specific REs. 
+/// Can be used to identify specific REs.
 #[derive(Debug, Sequence)]
 pub enum RestrictionEnzymeEnum {
     /// Aasi
@@ -1242,7 +1230,6 @@ pub enum RestrictionEnzymeEnum {
     Zsp2i,
 }
 
-
 // this is needed to get ENUMs as strings
 impl fmt::Display for RestrictionEnzymeEnum {
     fn fmt(&self, f: &mut fmt::Formatter) -> fmt::Result {
@@ -1251,19 +1238,22 @@ impl fmt::Display for RestrictionEnzymeEnum {
 }
 
 impl RestrictionEnzymeEnum {
-    pub fn value(&self) ->  RestrictionEnzyme {
-        let fval  = &self.to_string();
-        let rebase_file= DATA_DIR.get_file(format!("{}.json", fval)).unwrap().contents_utf8().unwrap();
+    pub fn value(&self) -> RestrictionEnzyme {
+        let fval = &self.to_string();
+        let rebase_file = DATA_DIR
+            .get_file(format!("{}.json", fval))
+            .unwrap()
+            .contents_utf8()
+            .unwrap();
         let redata = serde_json::from_str(&rebase_file).expect("Failed to deserialize JSON data");
         redata
     }
 }
 
-
 #[cfg(test)]
 mod tests {
     use super::*;
-
+    use enum_iterator::{all, cardinality};
     #[test]
     fn test_cardinality() {
         // I've commentsed out 5  JSON files that do not have an ID
@@ -1271,19 +1261,15 @@ mod tests {
         assert_eq!(cardinality::<RestrictionEnzymeEnum>(), 1060);
     }
 
-
-
     #[test]
     fn test_can_load() {
         for e in all::<RestrictionEnzymeEnum>() {
             println!("{:?}", e);
             let res = e.value();
-            println!("{:?}",res)
+            println!("{:?}", res)
             // res
         }
     }
-
-
 
     #[test]
     fn test_palindromic() {
@@ -1295,14 +1281,15 @@ mod tests {
         assert_eq!(palindromic.len(), 1060)
     }
 
-
-
     #[test]
     fn test_re_data_loaded() {
-        let aari= RestrictionEnzymeEnum::Aari.value();
-        println!("aari! {:?}", aari);        
+        let aari = RestrictionEnzymeEnum::Aari.value();
+        println!("aari! {:?}", aari);
         assert_eq!(aari.name, "Aari");
-        assert_eq!(aari.compsite, "(?=(?P<AarI>CACCTGC))|(?=(?P<AarI_as>GCAGGTG))");
+        assert_eq!(
+            aari.compsite,
+            "(?=(?P<AarI>CACCTGC))|(?=(?P<AarI_as>GCAGGTG))"
+        );
         assert_eq!(aari.dna, None);
         assert_eq!(aari.freq, 16384.0);
         assert_eq!(aari.fst3.unwrap(), 8);
@@ -1324,8 +1311,8 @@ mod tests {
 
     #[test]
     fn test_re_data_loaded_2() {
-        let zsp2i= RestrictionEnzymeEnum::Zsp2i.value();
-        println!("zsp2i! {:?}", zsp2i);        
+        let zsp2i = RestrictionEnzymeEnum::Zsp2i.value();
+        println!("zsp2i! {:?}", zsp2i);
         assert_eq!(zsp2i.name, "Zsp2i");
         assert_eq!(zsp2i.compsite, "(?=(?P<Zsp2I>ATGCAT))");
         assert_eq!(zsp2i.dna, None);
@@ -1349,21 +1336,18 @@ mod tests {
 
     #[test]
     fn test_restriction_enzyme_fns() {
-        let zsp2i= RestrictionEnzymeEnum::Zsp2i.value();
+        let zsp2i = RestrictionEnzymeEnum::Zsp2i.value();
         assert_eq!(zsp2i.site, "ATGCAT");
         assert_eq!(zsp2i.reverse_site(), "TACGTA");
-        assert_eq!(zsp2i.site,  zsp2i.reverse_complement_site());
+        assert_eq!(zsp2i.site, zsp2i.reverse_complement_site());
 
-        let ecori= RestrictionEnzymeEnum::Ecori.value();
+        let ecori = RestrictionEnzymeEnum::Ecori.value();
         assert_eq!(ecori.site, "GAATTC");
         assert_eq!(ecori.reverse_site(), "CTTAAG");
-        assert_eq!(ecori.site,  ecori.reverse_complement_site());
-        
-        
-        let smai= RestrictionEnzymeEnum::Smai.value();
+        assert_eq!(ecori.site, ecori.reverse_complement_site());
+
+        let smai = RestrictionEnzymeEnum::Smai.value();
         assert!(smai.is_end_blunt());
         assert!(!smai.is_end_sticky());
     }
-
-
 }
