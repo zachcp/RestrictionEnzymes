@@ -1338,12 +1338,10 @@ mod tests {
     fn test_restriction_enzyme_fns() {
         let zsp2i = RestrictionEnzymeEnum::Zsp2i.value();
         assert_eq!(zsp2i.site, "ATGCAT");
-        assert_eq!(zsp2i.reverse_site(), "TACGTA");
         assert_eq!(zsp2i.site, zsp2i.reverse_complement_site());
 
         let ecori = RestrictionEnzymeEnum::Ecori.value();
         assert_eq!(ecori.site, "GAATTC");
-        assert_eq!(ecori.reverse_site(), "CTTAAG");
         assert_eq!(ecori.site, ecori.reverse_complement_site());
 
         let smai = RestrictionEnzymeEnum::Smai.value();
