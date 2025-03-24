@@ -1,1 +1,0 @@
-{"compsite": "(?=(?P<FatI>CATG))", "dna": null, "freq": 256.0, "fst3": 0, "fst5": 0, "id": 5536, "inact_temp": 65, "opt_temp": 37, "ovhg": -4, "ovhgseq": "CATG", "results": null, "scd3": null, "scd5": null, "site": "CATG", "size": 4, "substrat": "DNA", "suppl": ["I", "N"], "uri": "https://identifiers.org/rebase:5536", "name": "Fati"}

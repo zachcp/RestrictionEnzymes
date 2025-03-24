@@ -1,1 +1,0 @@
-{"compsite": "(?=(?P<BfrI>CTTAAG))", "dna": null, "freq": 4096.0, "fst3": -1, "fst5": 1, "id": 259, "inact_temp": 65, "opt_temp": 37, "ovhg": -4, "ovhgseq": "TTAA", "results": null, "scd3": null, "scd5": null, "site": "CTTAAG", "size": 6, "substrat": "DNA", "suppl": ["M", "S"], "uri": "https://identifiers.org/rebase:259", "name": "Bfri"}

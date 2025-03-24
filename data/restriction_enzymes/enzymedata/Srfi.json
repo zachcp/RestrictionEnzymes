@@ -1,1 +1,0 @@
-{"compsite": "(?=(?P<SrfI>GCCCGGGC))", "dna": null, "freq": 65536.0, "fst3": -4, "fst5": 4, "id": 1728, "inact_temp": 65, "opt_temp": 37, "ovhg": 0, "ovhgseq": "", "results": null, "scd3": null, "scd5": null, "site": "GCCCGGGC", "size": 8, "substrat": "DNA", "suppl": ["N"], "uri": "https://identifiers.org/rebase:1728", "name": "Srfi"}

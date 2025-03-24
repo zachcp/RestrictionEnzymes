@@ -1,1 +1,0 @@
-{"compsite": "(?=(?P<Ksp632I>CTCTTC))|(?=(?P<Ksp632I_as>GAAGAG))", "dna": null, "freq": 4096.0, "fst3": 4, "fst5": 7, "id": 1183, "inact_temp": 65, "opt_temp": 37, "ovhg": -3, "ovhgseq": "NNN", "results": null, "scd3": null, "scd5": null, "site": "CTCTTC", "size": 6, "substrat": "DNA", "suppl": [], "uri": "https://identifiers.org/rebase:1183", "name": "Ksp632i"}

@@ -1,1 +1,0 @@
-{"compsite": "(?=(?P<LguI>GCTCTTC))|(?=(?P<LguI_as>GAAGAGC))", "dna": null, "freq": 16384.0, "fst3": 4, "fst5": 8, "id": 10920, "inact_temp": 65, "opt_temp": 37, "ovhg": -3, "ovhgseq": "NNN", "results": null, "scd3": null, "scd5": null, "site": "GCTCTTC", "size": 7, "substrat": "DNA", "suppl": ["B"], "uri": "https://identifiers.org/rebase:10920", "name": "Lgui"}

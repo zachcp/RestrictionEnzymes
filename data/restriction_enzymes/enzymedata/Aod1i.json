@@ -1,1 +1,0 @@
-{"compsite": "(?=(?P<Aod1I>GATC.AC))|(?=(?P<Aod1I_as>GT.GATC))", "dna": null, "freq": 4096.0, "fst3": null, "fst5": null, "id": 270415, "inact_temp": 65, "opt_temp": 37, "ovhg": null, "ovhgseq": null, "results": null, "scd3": null, "scd5": null, "site": "GATCNAC", "size": 7, "substrat": "DNA", "suppl": [], "uri": "https://identifiers.org/rebase:270415", "name": "Aod1i"}

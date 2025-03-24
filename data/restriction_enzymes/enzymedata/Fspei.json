@@ -1,1 +1,0 @@
-{"compsite": "(?=(?P<FspEI>CC))|(?=(?P<FspEI_as>GG))", "dna": null, "freq": 16.0, "fst3": 16, "fst5": 14, "id": 23359, "inact_temp": 65, "opt_temp": 37, "ovhg": -4, "ovhgseq": "NNNN", "results": null, "scd3": null, "scd5": null, "site": "CC", "size": 2, "substrat": "DNA", "suppl": ["N"], "uri": "https://identifiers.org/rebase:23359", "name": "Fspei"}

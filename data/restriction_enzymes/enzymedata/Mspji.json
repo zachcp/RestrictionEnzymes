@@ -1,1 +1,0 @@
-{"compsite": "(?=(?P<MspJI>C..[AG]))|(?=(?P<MspJI_as>[CT]..G))", "dna": null, "freq": 8.0, "fst3": 13, "fst5": 13, "id": 18979, "inact_temp": 65, "opt_temp": 37, "ovhg": -4, "ovhgseq": "NNNN", "results": null, "scd3": null, "scd5": null, "site": "CNNR", "size": 4, "substrat": "DNA", "suppl": ["N"], "uri": "https://identifiers.org/rebase:18979", "name": "Mspji"}

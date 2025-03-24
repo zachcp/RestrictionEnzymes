@@ -1,1 +1,0 @@
-{"compsite": "(?=(?P<Bsp1407I>TGTACA))", "dna": null, "freq": 4096.0, "fst3": -1, "fst5": 1, "id": 2175, "inact_temp": 65, "opt_temp": 37, "ovhg": -4, "ovhgseq": "GTAC", "results": null, "scd3": null, "scd5": null, "site": "TGTACA", "size": 6, "substrat": "DNA", "suppl": ["B", "K"], "uri": "https://identifiers.org/rebase:2175", "name": "Bsp1407i"}

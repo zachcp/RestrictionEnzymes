@@ -1,1 +1,0 @@
-{"compsite": "(?=(?P<BseYI>CCCAGC))|(?=(?P<BseYI_as>GCTGGG))", "dna": null, "freq": 4096.0, "fst3": -1, "fst5": 1, "id": 5309, "inact_temp": 65, "opt_temp": 37, "ovhg": -4, "ovhgseq": "CCAG", "results": null, "scd3": null, "scd5": null, "site": "CCCAGC", "size": 6, "substrat": "DNA", "suppl": ["N"], "uri": "https://identifiers.org/rebase:5309", "name": "Bseyi"}

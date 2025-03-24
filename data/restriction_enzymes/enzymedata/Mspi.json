@@ -1,1 +1,0 @@
-{"compsite": "(?=(?P<MspI>CCGG))", "dna": null, "freq": 256.0, "fst3": -1, "fst5": 1, "id": 1277, "inact_temp": 65, "opt_temp": 37, "ovhg": -2, "ovhgseq": "CG", "results": null, "scd3": null, "scd5": null, "site": "CCGG", "size": 4, "substrat": "DNA", "suppl": ["B", "I", "J", "K", "N", "Q", "R", "V", "X"], "uri": "https://identifiers.org/rebase:1277", "name": "Mspi"}

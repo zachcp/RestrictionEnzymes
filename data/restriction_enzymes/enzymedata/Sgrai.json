@@ -1,1 +1,0 @@
-{"compsite": "(?=(?P<SgrAI>C[AG]CCGG[CT]G))", "dna": null, "freq": 16384.0, "fst3": -2, "fst5": 2, "id": 1673, "inact_temp": 65, "opt_temp": 37, "ovhg": -4, "ovhgseq": "CCGG", "results": null, "scd3": null, "scd5": null, "site": "CRCCGGYG", "size": 8, "substrat": "DNA", "suppl": ["N"], "uri": "https://identifiers.org/rebase:1673", "name": "Sgrai"}

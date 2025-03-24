@@ -1,1 +1,0 @@
-{"compsite": "(?=(?P<BtsCI>GGATG))|(?=(?P<BtsCI_as>CATCC))", "dna": null, "freq": 1024.0, "fst3": 0, "fst5": 7, "id": 10541, "inact_temp": 65, "opt_temp": 37, "ovhg": 2, "ovhgseq": "NN", "results": null, "scd3": null, "scd5": null, "site": "GGATG", "size": 5, "substrat": "DNA", "suppl": ["N"], "uri": "https://identifiers.org/rebase:10541", "name": "Btsci"}

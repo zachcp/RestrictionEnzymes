@@ -1,1 +1,0 @@
-{"compsite": "(?=(?P<FaqI>GGGAC))|(?=(?P<FaqI_as>GTCCC))", "dna": null, "freq": 1024.0, "fst3": 14, "fst5": 15, "id": 7454, "inact_temp": 65, "opt_temp": 37, "ovhg": -4, "ovhgseq": "NNNN", "results": null, "scd3": null, "scd5": null, "site": "GGGAC", "size": 5, "substrat": "DNA", "suppl": ["B"], "uri": "https://identifiers.org/rebase:7454", "name": "Faqi"}

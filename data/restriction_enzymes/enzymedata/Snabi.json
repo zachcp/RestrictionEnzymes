@@ -1,1 +1,0 @@
-{"compsite": "(?=(?P<SnaBI>TACGTA))", "dna": null, "freq": 4096.0, "fst3": -3, "fst5": 3, "id": 1707, "inact_temp": 65, "opt_temp": 37, "ovhg": 0, "ovhgseq": "", "results": null, "scd3": null, "scd5": null, "site": "TACGTA", "size": 6, "substrat": "DNA", "suppl": ["C", "K", "M", "N"], "uri": "https://identifiers.org/rebase:1707", "name": "Snabi"}

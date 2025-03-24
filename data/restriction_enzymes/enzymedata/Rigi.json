@@ -1,1 +1,0 @@
-{"compsite": "(?=(?P<RigI>GGCCGGCC))", "dna": null, "freq": 65536.0, "fst3": -6, "fst5": 6, "id": 14596, "inact_temp": 65, "opt_temp": 37, "ovhg": 4, "ovhgseq": "CCGG", "results": null, "scd3": null, "scd5": null, "site": "GGCCGGCC", "size": 8, "substrat": "DNA", "suppl": ["I"], "uri": "https://identifiers.org/rebase:14596", "name": "Rigi"}

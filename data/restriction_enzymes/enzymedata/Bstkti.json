@@ -1,1 +1,0 @@
-{"compsite": "(?=(?P<BstKTI>GATC))", "dna": null, "freq": 256.0, "fst3": -3, "fst5": 3, "id": 5533, "inact_temp": 65, "opt_temp": 37, "ovhg": 2, "ovhgseq": "AT", "results": null, "scd3": null, "scd5": null, "site": "GATC", "size": 4, "substrat": "DNA", "suppl": ["I"], "uri": "https://identifiers.org/rebase:5533", "name": "Bstkti"}

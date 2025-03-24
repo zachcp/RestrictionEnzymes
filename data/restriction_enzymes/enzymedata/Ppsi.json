@@ -1,1 +1,0 @@
-{"compsite": "(?=(?P<PpsI>GAGTC))|(?=(?P<PpsI_as>GACTC))", "dna": null, "freq": 1024.0, "fst3": 5, "fst5": 9, "id": 3199, "inact_temp": 65, "opt_temp": 37, "ovhg": -1, "ovhgseq": "N", "results": null, "scd3": null, "scd5": null, "site": "GAGTC", "size": 5, "substrat": "DNA", "suppl": ["I"], "uri": "https://identifiers.org/rebase:3199", "name": "Ppsi"}

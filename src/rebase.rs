@@ -39,7 +39,7 @@
 //!
 //!
 use enum_iterator::Sequence;
-use include_dir::{include_dir, Dir};
+use include_dir::{Dir, include_dir};
 use serde::{Deserialize, Serialize};
 use serde_json;
 use std::fmt::{self, Debug};
@@ -1228,26 +1228,6 @@ pub enum RestrictionEnzymeEnum {
     Zrai,
     Zrmi,
     Zsp2i,
-}
-
-// this is needed to get ENUMs as strings
-impl fmt::Display for RestrictionEnzymeEnum {
-    fn fmt(&self, f: &mut fmt::Formatter) -> fmt::Result {
-        fmt::Debug::fmt(&self, f)
-    }
-}
-
-impl RestrictionEnzymeEnum {
-    pub fn value(&self) -> RestrictionEnzyme {
-        let fval = &self.to_string();
-        let rebase_file = DATA_DIR
-            .get_file(format!("{}.json", fval))
-            .unwrap()
-            .contents_utf8()
-            .unwrap();
-        let redata = serde_json::from_str(&rebase_file).expect("Failed to deserialize JSON data");
-        redata
-    }
 }
 
 #[cfg(test)]

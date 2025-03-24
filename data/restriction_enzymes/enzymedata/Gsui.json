@@ -1,1 +1,0 @@
-{"compsite": "(?=(?P<GsuI>CTGGAG))|(?=(?P<GsuI_as>CTCCAG))", "dna": null, "freq": 4096.0, "fst3": 14, "fst5": 22, "id": 1085, "inact_temp": 65, "opt_temp": 37, "ovhg": 2, "ovhgseq": "NN", "results": null, "scd3": null, "scd5": null, "site": "CTGGAG", "size": 6, "substrat": "DNA", "suppl": ["B"], "uri": "https://identifiers.org/rebase:1085", "name": "Gsui"}

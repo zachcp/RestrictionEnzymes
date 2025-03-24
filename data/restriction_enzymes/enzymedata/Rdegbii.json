@@ -1,1 +1,0 @@
-{"compsite": "(?=(?P<RdeGBII>ACCCAG))|(?=(?P<RdeGBII_as>CTGGGT))", "dna": null, "freq": 4096.0, "fst3": 18, "fst5": 26, "id": 28551, "inact_temp": 65, "opt_temp": 37, "ovhg": 2, "ovhgseq": "NN", "results": null, "scd3": null, "scd5": null, "site": "ACCCAG", "size": 6, "substrat": "DNA", "suppl": [], "uri": "https://identifiers.org/rebase:28551", "name": "Rdegbii"}

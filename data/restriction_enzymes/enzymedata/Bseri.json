@@ -1,1 +1,0 @@
-{"compsite": "(?=(?P<BseRI>GAGGAG))|(?=(?P<BseRI_as>CTCCTC))", "dna": null, "freq": 4096.0, "fst3": 8, "fst5": 16, "id": 2316, "inact_temp": 65, "opt_temp": 37, "ovhg": 2, "ovhgseq": "NN", "results": null, "scd3": null, "scd5": null, "site": "GAGGAG", "size": 6, "substrat": "DNA", "suppl": ["N"], "uri": "https://identifiers.org/rebase:2316", "name": "Bseri"}

@@ -1,1 +1,0 @@
-{"compsite": "(?=(?P<RceI>CATCGAC))|(?=(?P<RceI_as>GTCGATG))", "dna": null, "freq": 16384.0, "fst3": 18, "fst5": 27, "id": 20241, "inact_temp": 65, "opt_temp": 37, "ovhg": 2, "ovhgseq": "NN", "results": null, "scd3": null, "scd5": null, "site": "CATCGAC", "size": 7, "substrat": "DNA", "suppl": [], "uri": "https://identifiers.org/rebase:20241", "name": "Rcei"}

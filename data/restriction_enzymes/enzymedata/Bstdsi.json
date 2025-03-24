@@ -1,1 +1,0 @@
-{"compsite": "(?=(?P<BstDSI>CC[AG][CT]GG))", "dna": null, "freq": 1024.0, "fst3": -1, "fst5": 1, "id": 2739, "inact_temp": 65, "opt_temp": 37, "ovhg": -4, "ovhgseq": "CRYG", "results": null, "scd3": null, "scd5": null, "site": "CCRYGG", "size": 6, "substrat": "DNA", "suppl": ["I", "V"], "uri": "https://identifiers.org/rebase:2739", "name": "Bstdsi"}

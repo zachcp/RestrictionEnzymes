@@ -1,1 +1,0 @@
-{"compsite": "(?=(?P<Lmo370I>AGCGCCG))|(?=(?P<Lmo370I_as>CGGCGCT))", "dna": null, "freq": 16384.0, "fst3": null, "fst5": null, "id": 120713, "inact_temp": 65, "opt_temp": 37, "ovhg": null, "ovhgseq": null, "results": null, "scd3": null, "scd5": null, "site": "AGCGCCG", "size": 7, "substrat": "DNA", "suppl": [], "uri": "https://identifiers.org/rebase:120713", "name": "Lmo370i"}

@@ -1,1 +1,0 @@
-{"compsite": "(?=(?P<TkoII>TTCAAG))|(?=(?P<TkoII_as>CTTGAA))", "dna": null, "freq": 4096.0, "fst3": 8, "fst5": 16, "id": 10787, "inact_temp": 65, "opt_temp": 37, "ovhg": 2, "ovhgseq": "NN", "results": null, "scd3": null, "scd5": null, "site": "TTCAAG", "size": 6, "substrat": "DNA", "suppl": [], "uri": "https://identifiers.org/rebase:10787", "name": "Tkoii"}

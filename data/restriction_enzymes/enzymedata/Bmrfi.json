@@ -1,1 +1,0 @@
-{"compsite": "(?=(?P<BmrFI>CC.GG))", "dna": null, "freq": 256.0, "fst3": -2, "fst5": 2, "id": 10485, "inact_temp": 65, "opt_temp": 37, "ovhg": -1, "ovhgseq": "N", "results": null, "scd3": null, "scd5": null, "site": "CCNGG", "size": 5, "substrat": "DNA", "suppl": ["V"], "uri": "https://identifiers.org/rebase:10485", "name": "Bmrfi"}

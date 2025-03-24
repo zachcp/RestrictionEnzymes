@@ -1,1 +1,0 @@
-{"compsite": "(?=(?P<PlaDI>CATCAG))|(?=(?P<PlaDI_as>CTGATG))", "dna": null, "freq": 4096.0, "fst3": 19, "fst5": 27, "id": 16956, "inact_temp": 65, "opt_temp": 37, "ovhg": 2, "ovhgseq": "NN", "results": null, "scd3": null, "scd5": null, "site": "CATCAG", "size": 6, "substrat": "DNA", "suppl": [], "uri": "https://identifiers.org/rebase:16956", "name": "Pladi"}

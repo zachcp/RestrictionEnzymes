@@ -1,1 +1,0 @@
-{"compsite": "(?=(?P<PcsI>[AT]CG.......CG[AT]))", "dna": null, "freq": 1024.0, "fst3": -7, "fst5": 7, "id": 23597, "inact_temp": 65, "opt_temp": 37, "ovhg": 1, "ovhgseq": "N", "results": null, "scd3": null, "scd5": null, "site": "WCGNNNNNNNCGW", "size": 13, "substrat": "DNA", "suppl": ["I"], "uri": "https://identifiers.org/rebase:23597", "name": "Pcsi"}

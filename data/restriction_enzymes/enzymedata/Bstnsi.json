@@ -1,1 +1,0 @@
-{"compsite": "(?=(?P<BstNSI>[AG]CATG[CT]))", "dna": null, "freq": 1024.0, "fst3": -5, "fst5": 5, "id": 2864, "inact_temp": 65, "opt_temp": 37, "ovhg": 4, "ovhgseq": "CATG", "results": null, "scd3": null, "scd5": null, "site": "RCATGY", "size": 6, "substrat": "DNA", "suppl": ["I", "V"], "uri": "https://identifiers.org/rebase:2864", "name": "Bstnsi"}
