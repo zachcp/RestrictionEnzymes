@@ -6,4 +6,5 @@
 
 #[macro_use]
 pub mod rebase;
+pub mod rebase3;
 pub mod rebase_crab;
