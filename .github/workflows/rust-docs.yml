@@ -1,0 +1,24 @@
+name: Build and Deploy Rust Docs
+
+on:
+  push:
+    branches: [main] # Trigger on push to main branch
+  workflow_dispatch: # Allow manual triggering
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      - name: Setup Rust
+        uses: dtolnay/rust-toolchain@stable
+      - name: Build Documentation
+        run: cargo doc --no-deps
+      - name: Setup pages
+        id: pages
+        uses: actions/configure-pages@v4
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: target/doc/_site

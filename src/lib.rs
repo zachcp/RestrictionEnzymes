@@ -42,4 +42,4 @@ pub mod enzyme_trait;
 pub mod enzymes;
 // pub mod rebase;
 
-pub use enzyme_trait;
+pub use enzyme_trait::RestrictionEnzymeTrait;
