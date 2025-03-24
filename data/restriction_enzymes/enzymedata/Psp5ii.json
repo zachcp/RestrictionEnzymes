@@ -1,1 +1,0 @@
-{"compsite": "(?=(?P<Psp5II>[AG]GG[AT]CC[CT]))", "dna": null, "freq": 2048.0, "fst3": -2, "fst5": 2, "id": 1528, "inact_temp": 65, "opt_temp": 37, "ovhg": -3, "ovhgseq": "GWC", "results": null, "scd3": null, "scd5": null, "site": "RGGWCCY", "size": 7, "substrat": "DNA", "suppl": ["B"], "uri": "https://identifiers.org/rebase:1528", "name": "Psp5ii"}

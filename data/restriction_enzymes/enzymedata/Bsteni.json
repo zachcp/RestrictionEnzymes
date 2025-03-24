@@ -1,1 +1,0 @@
-{"compsite": "(?=(?P<BstENI>CCT.....AGG))", "dna": null, "freq": 4096.0, "fst3": -5, "fst5": 5, "id": 4841, "inact_temp": 65, "opt_temp": 37, "ovhg": -1, "ovhgseq": "N", "results": null, "scd3": null, "scd5": null, "site": "CCTNNNNNAGG", "size": 11, "substrat": "DNA", "suppl": ["I", "V"], "uri": "https://identifiers.org/rebase:4841", "name": "Bsteni"}

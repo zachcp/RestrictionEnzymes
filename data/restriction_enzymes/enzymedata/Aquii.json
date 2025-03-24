@@ -1,1 +1,0 @@
-{"compsite": "(?=(?P<AquII>GCCG.AC))|(?=(?P<AquII_as>GT.CGGC))", "dna": null, "freq": 4096.0, "fst3": 18, "fst5": 27, "id": 20238, "inact_temp": 65, "opt_temp": 37, "ovhg": 2, "ovhgseq": "NN", "results": null, "scd3": null, "scd5": null, "site": "GCCGNAC", "size": 7, "substrat": "DNA", "suppl": [], "uri": "https://identifiers.org/rebase:20238", "name": "Aquii"}

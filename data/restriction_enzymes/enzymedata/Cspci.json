@@ -1,1 +1,0 @@
-{"compsite": "(?=(?P<CspCI>CAA.....GTGG))|(?=(?P<CspCI_as>CCAC.....TTG))", "dna": null, "freq": 16384.0, "fst3": -25, "fst5": -11, "id": 5047, "inact_temp": 65, "opt_temp": 37, "ovhg": 2, "ovhgseq": "NN", "results": null, "scd3": 10, "scd5": 24, "site": "CAANNNNNGTGG", "size": 12, "substrat": "DNA", "suppl": ["N"], "uri": "https://identifiers.org/rebase:5047", "name": "Cspci"}

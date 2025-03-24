@@ -1,1 +1,0 @@
-{"compsite": "(?=(?P<XhoI>CTCGAG))", "dna": null, "freq": 4096.0, "fst3": -1, "fst5": 1, "id": 2136, "inact_temp": 65, "opt_temp": 37, "ovhg": -4, "ovhgseq": "TCGA", "results": null, "scd3": null, "scd5": null, "site": "CTCGAG", "size": 6, "substrat": "DNA", "suppl": ["B", "J", "K", "M", "N", "O", "Q", "R", "X"], "uri": "https://identifiers.org/rebase:2136", "name": "Xhoi"}

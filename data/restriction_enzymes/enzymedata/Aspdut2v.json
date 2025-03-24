@@ -1,1 +1,0 @@
-{"compsite": "(?=(?P<AspDUT2V>G.GCAAC))|(?=(?P<AspDUT2V_as>GTTGC.C))", "dna": null, "freq": 4096.0, "fst3": null, "fst5": null, "id": 142406, "inact_temp": 65, "opt_temp": 37, "ovhg": null, "ovhgseq": null, "results": null, "scd3": null, "scd5": null, "site": "GNGCAAC", "size": 7, "substrat": "DNA", "suppl": [], "uri": "https://identifiers.org/rebase:142406", "name": "Aspdut2v"}

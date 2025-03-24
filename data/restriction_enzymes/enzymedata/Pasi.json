@@ -1,1 +1,0 @@
-{"compsite": "(?=(?P<PasI>CCC[AT]GGG))", "dna": null, "freq": 8192.0, "fst3": -2, "fst5": 2, "id": 7401, "inact_temp": 65, "opt_temp": 37, "ovhg": -3, "ovhgseq": "CWG", "results": null, "scd3": null, "scd5": null, "site": "CCCWGGG", "size": 7, "substrat": "DNA", "suppl": ["B"], "uri": "https://identifiers.org/rebase:7401", "name": "Pasi"}

@@ -1,1 +1,0 @@
-{"compsite": "(?=(?P<BsaXI>AC.....CTCC))|(?=(?P<BsaXI_as>GGAG.....GT))", "dna": null, "freq": 4096.0, "fst3": -23, "fst5": -9, "id": 2194, "inact_temp": 65, "opt_temp": 37, "ovhg": 3, "ovhgseq": "NNN", "results": null, "scd3": 7, "scd5": 21, "site": "ACNNNNNCTCC", "size": 11, "substrat": "DNA", "suppl": ["N"], "uri": "https://identifiers.org/rebase:2194", "name": "Bsaxi"}

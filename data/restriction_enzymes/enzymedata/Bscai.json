@@ -1,1 +1,0 @@
-{"compsite": "(?=(?P<BscAI>GCATC))|(?=(?P<BscAI_as>GATGC))", "dna": null, "freq": 1024.0, "fst3": 6, "fst5": 9, "id": 330, "inact_temp": 65, "opt_temp": 37, "ovhg": -2, "ovhgseq": "NN", "results": null, "scd3": null, "scd5": null, "site": "GCATC", "size": 5, "substrat": "DNA", "suppl": [], "uri": "https://identifiers.org/rebase:330", "name": "Bscai"}

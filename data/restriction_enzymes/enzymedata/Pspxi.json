@@ -1,1 +1,0 @@
-{"compsite": "(?=(?P<PspXI>[ACG]CTCGAG[CGT]))", "dna": null, "freq": 7281.777777777777, "fst3": -2, "fst5": 2, "id": 7531, "inact_temp": 65, "opt_temp": 37, "ovhg": -4, "ovhgseq": "TCGA", "results": null, "scd3": null, "scd5": null, "site": "VCTCGAGB", "size": 8, "substrat": "DNA", "suppl": ["I", "N"], "uri": "https://identifiers.org/rebase:7531", "name": "Pspxi"}

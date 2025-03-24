@@ -1,0 +1,13 @@
+[workspace]
+authors = ["Zachary Charlop-Powers <zach.charlop.powers@gmail.com>"]
+channels = ["conda-forge"]
+name = "RestrictionEnzymes"
+platforms = ["osx-arm64"]
+version = "0.1.0"
+
+[tasks]
+download-resbase = "python scripts/create_resbase.py"
+
+[dependencies]
+python = ">=3.13.2,<3.14"
+biopython = ">=1.85,<2"

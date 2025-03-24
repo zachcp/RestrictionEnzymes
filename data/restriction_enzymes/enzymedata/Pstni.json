@@ -1,1 +1,0 @@
-{"compsite": "(?=(?P<PstNI>CAG...CTG))", "dna": null, "freq": 4096.0, "fst3": -6, "fst5": 6, "id": 26996, "inact_temp": 65, "opt_temp": 37, "ovhg": 3, "ovhgseq": "NNN", "results": null, "scd3": null, "scd5": null, "site": "CAGNNNCTG", "size": 9, "substrat": "DNA", "suppl": ["I"], "uri": "https://identifiers.org/rebase:26996", "name": "Pstni"}

@@ -1,1 +1,0 @@
-{"compsite": "(?=(?P<CciNI>GCGGCCGC))", "dna": null, "freq": 65536.0, "fst3": -2, "fst5": 2, "id": 2673, "inact_temp": 65, "opt_temp": 37, "ovhg": -4, "ovhgseq": "GGCC", "results": null, "scd3": null, "scd5": null, "site": "GCGGCCGC", "size": 8, "substrat": "DNA", "suppl": ["I", "V"], "uri": "https://identifiers.org/rebase:2673", "name": "Ccini"}

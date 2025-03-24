@@ -1,1 +1,0 @@
-{"compsite": "(?=(?P<BstX2I>[AG]GATC[CT]))", "dna": null, "freq": 1024.0, "fst3": -1, "fst5": 1, "id": 2766, "inact_temp": 65, "opt_temp": 37, "ovhg": -4, "ovhgseq": "GATC", "results": null, "scd3": null, "scd5": null, "site": "RGATCY", "size": 6, "substrat": "DNA", "suppl": ["I", "V"], "uri": "https://identifiers.org/rebase:2766", "name": "Bstx2i"}

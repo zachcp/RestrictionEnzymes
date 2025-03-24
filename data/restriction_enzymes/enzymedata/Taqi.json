@@ -1,1 +1,0 @@
-{"compsite": "(?=(?P<TaqI>TCGA))", "dna": null, "freq": 256.0, "fst3": -1, "fst5": 1, "id": 1801, "inact_temp": 65, "opt_temp": 37, "ovhg": -2, "ovhgseq": "CG", "results": null, "scd3": null, "scd5": null, "site": "TCGA", "size": 4, "substrat": "DNA", "suppl": ["B", "C", "I", "J", "K", "M", "N", "Q", "R", "V", "X"], "uri": "https://identifiers.org/rebase:1801", "name": "Taqi"}

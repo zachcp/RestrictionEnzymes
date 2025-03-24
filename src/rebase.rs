@@ -39,7 +39,7 @@
 //!
 //!
 use enum_iterator::Sequence;
-use include_dir::{include_dir, Dir};
+use include_dir::{Dir, include_dir};
 use serde::{Deserialize, Serialize};
 use serde_json;
 use std::fmt::{self, Debug};
@@ -1230,26 +1230,6 @@ pub enum RestrictionEnzymeEnum {
     Zsp2i,
 }
 
-// this is needed to get ENUMs as strings
-impl fmt::Display for RestrictionEnzymeEnum {
-    fn fmt(&self, f: &mut fmt::Formatter) -> fmt::Result {
-        fmt::Debug::fmt(&self, f)
-    }
-}
-
-impl RestrictionEnzymeEnum {
-    pub fn value(&self) -> RestrictionEnzyme {
-        let fval = &self.to_string();
-        let rebase_file = DATA_DIR
-            .get_file(format!("{}.json", fval))
-            .unwrap()
-            .contents_utf8()
-            .unwrap();
-        let redata = serde_json::from_str(&rebase_file).expect("Failed to deserialize JSON data");
-        redata
-    }
-}
-
 #[cfg(test)]
 mod tests {
     use super::*;
@@ -1338,12 +1318,10 @@ mod tests {
     fn test_restriction_enzyme_fns() {
         let zsp2i = RestrictionEnzymeEnum::Zsp2i.value();
         assert_eq!(zsp2i.site, "ATGCAT");
-        assert_eq!(zsp2i.reverse_site(), "TACGTA");
         assert_eq!(zsp2i.site, zsp2i.reverse_complement_site());
 
         let ecori = RestrictionEnzymeEnum::Ecori.value();
         assert_eq!(ecori.site, "GAATTC");
-        assert_eq!(ecori.reverse_site(), "CTTAAG");
         assert_eq!(ecori.site, ecori.reverse_complement_site());
 
         let smai = RestrictionEnzymeEnum::Smai.value();

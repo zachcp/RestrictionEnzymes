@@ -1,1 +1,0 @@
-{"compsite": "(?=(?P<FspAI>[AG]TGCGCA[CT]))", "dna": null, "freq": 16384.0, "fst3": -4, "fst5": 4, "id": 4756, "inact_temp": 65, "opt_temp": 37, "ovhg": 0, "ovhgseq": "", "results": null, "scd3": null, "scd5": null, "site": "RTGCGCAY", "size": 8, "substrat": "DNA", "suppl": ["B"], "uri": "https://identifiers.org/rebase:4756", "name": "Fspai"}

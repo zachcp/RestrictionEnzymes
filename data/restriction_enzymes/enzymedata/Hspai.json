@@ -1,1 +1,0 @@
-{"compsite": "(?=(?P<HspAI>GCGC))", "dna": null, "freq": 256.0, "fst3": -1, "fst5": 1, "id": 2675, "inact_temp": 65, "opt_temp": 37, "ovhg": -2, "ovhgseq": "CG", "results": null, "scd3": null, "scd5": null, "site": "GCGC", "size": 4, "substrat": "DNA", "suppl": ["I", "V"], "uri": "https://identifiers.org/rebase:2675", "name": "Hspai"}

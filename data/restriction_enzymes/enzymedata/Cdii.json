@@ -1,1 +1,0 @@
-{"compsite": "(?=(?P<CdiI>CATCG))|(?=(?P<CdiI_as>CGATG))", "dna": null, "freq": 1024.0, "fst3": -1, "fst5": 4, "id": 5297, "inact_temp": 65, "opt_temp": 37, "ovhg": 0, "ovhgseq": "", "results": null, "scd3": null, "scd5": null, "site": "CATCG", "size": 5, "substrat": "DNA", "suppl": [], "uri": "https://identifiers.org/rebase:5297", "name": "Cdii"}

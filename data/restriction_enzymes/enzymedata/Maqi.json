@@ -1,1 +1,0 @@
-{"compsite": "(?=(?P<MaqI>C[AG]TTGAC))|(?=(?P<MaqI_as>GTCAA[CT]G))", "dna": null, "freq": 8192.0, "fst3": 19, "fst5": 28, "id": 16957, "inact_temp": 65, "opt_temp": 37, "ovhg": 2, "ovhgseq": "NN", "results": null, "scd3": null, "scd5": null, "site": "CRTTGAC", "size": 7, "substrat": "DNA", "suppl": [], "uri": "https://identifiers.org/rebase:16957", "name": "Maqi"}

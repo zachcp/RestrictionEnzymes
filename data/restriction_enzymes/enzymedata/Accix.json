@@ -1,1 +1,0 @@
-{"compsite": "(?=(?P<AccIX>GAC[AG]AC))|(?=(?P<AccIX_as>GT[CT]GTC))", "dna": null, "freq": 2048.0, "fst3": null, "fst5": null, "id": 278986, "inact_temp": 65, "opt_temp": 37, "ovhg": null, "ovhgseq": null, "results": null, "scd3": null, "scd5": null, "site": "GACRAC", "size": 6, "substrat": "DNA", "suppl": [], "uri": "https://identifiers.org/rebase:278986", "name": "Accix"}

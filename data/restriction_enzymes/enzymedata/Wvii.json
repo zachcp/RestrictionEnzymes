@@ -1,1 +1,0 @@
-{"compsite": "(?=(?P<WviI>CAC[AG]AG))|(?=(?P<WviI_as>CT[CT]GTG))", "dna": null, "freq": 2048.0, "fst3": 19, "fst5": 27, "id": 33033, "inact_temp": 65, "opt_temp": 37, "ovhg": 2, "ovhgseq": "NN", "results": null, "scd3": null, "scd5": null, "site": "CACRAG", "size": 6, "substrat": "DNA", "suppl": [], "uri": "https://identifiers.org/rebase:33033", "name": "Wvii"}

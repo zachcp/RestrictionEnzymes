@@ -1,1 +1,0 @@
-{"compsite": "(?=(?P<ChaI>GATC))", "dna": null, "freq": 256.0, "fst3": -4, "fst5": 4, "id": 2688, "inact_temp": 65, "opt_temp": 37, "ovhg": 4, "ovhgseq": "GATC", "results": null, "scd3": null, "scd5": null, "site": "GATC", "size": 4, "substrat": "DNA", "suppl": [], "uri": "https://identifiers.org/rebase:2688", "name": "Chai"}

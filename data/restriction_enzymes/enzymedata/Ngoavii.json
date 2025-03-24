@@ -1,1 +1,0 @@
-{"compsite": "(?=(?P<NgoAVII>GCCGC))|(?=(?P<NgoAVII_as>GCGGC))", "dna": null, "freq": 1024.0, "fst3": 7, "fst5": 12, "id": 5857, "inact_temp": 65, "opt_temp": 37, "ovhg": 0, "ovhgseq": "", "results": null, "scd3": null, "scd5": null, "site": "GCCGC", "size": 5, "substrat": "DNA", "suppl": [], "uri": "https://identifiers.org/rebase:5857", "name": "Ngoavii"}

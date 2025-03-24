@@ -1,1 +1,0 @@
-{"compsite": "(?=(?P<SfaAI>GCGATCGC))", "dna": null, "freq": 65536.0, "fst3": -5, "fst5": 5, "id": 10922, "inact_temp": 65, "opt_temp": 37, "ovhg": 2, "ovhgseq": "AT", "results": null, "scd3": null, "scd5": null, "site": "GCGATCGC", "size": 8, "substrat": "DNA", "suppl": ["B"], "uri": "https://identifiers.org/rebase:10922", "name": "Sfaai"}

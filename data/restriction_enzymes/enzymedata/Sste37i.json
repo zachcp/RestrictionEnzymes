@@ -1,1 +1,0 @@
-{"compsite": "(?=(?P<SstE37I>CGAAGAC))|(?=(?P<SstE37I_as>GTCTTCG))", "dna": null, "freq": 16384.0, "fst3": 18, "fst5": 27, "id": 26747, "inact_temp": 65, "opt_temp": 37, "ovhg": 2, "ovhgseq": "NN", "results": null, "scd3": null, "scd5": null, "site": "CGAAGAC", "size": 7, "substrat": "DNA", "suppl": [], "uri": "https://identifiers.org/rebase:26747", "name": "Sste37i"}

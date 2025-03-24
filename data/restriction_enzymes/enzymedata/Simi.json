@@ -1,1 +1,0 @@
-{"compsite": "(?=(?P<SimI>GGGTC))|(?=(?P<SimI_as>GACCC))", "dna": null, "freq": 1024.0, "fst3": 0, "fst5": 2, "id": 2782, "inact_temp": 65, "opt_temp": 37, "ovhg": -3, "ovhgseq": "GTC", "results": null, "scd3": null, "scd5": null, "site": "GGGTC", "size": 5, "substrat": "DNA", "suppl": [], "uri": "https://identifiers.org/rebase:2782", "name": "Simi"}
