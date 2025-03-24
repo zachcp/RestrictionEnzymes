@@ -21,4 +21,4 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: target/doc/restriction_enzymes
+          path: target/doc/
