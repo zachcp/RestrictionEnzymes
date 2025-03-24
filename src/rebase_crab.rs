@@ -6,58 +6,63 @@ pub trait RestrictionEnzymeTrait {
     const OVHG_SEQ: Option<&'static str>;
     const SIZE: i32;
 
-    const INACT_TEMP: i32 = 65;
-    const OPT_TEMP: i32 = 37;
-    const SUBSTRAT: &'static str = "DNA";
+    const INACT_TEMP: i32 = 65; // Default value, will be overridden if needed
+    const OPT_TEMP: i32 = 37; // Default value, will be overridden if needed
+    const SUBSTRAT: &'static str = "DNA"; // Default value, will be overridden if needed
 }
 
-#[crabtime::function]
-fn generate_restriction_enzymes() -> String {
-    // Define enzyme data - simplified for clarity
-    let enzymes = [
-        ("EcoRI", "GAATTC", 5, 1, "AATT", 6),
-        ("BamHI", "GGATCC", 5, 1, "GATC", 6),
-        ("HindIII", "AAGCTT", 5, 1, "AGCT", 6),
-    ];
+mod generated {
+    use super::RestrictionEnzymeTrait;
+    use crabtime;
 
-    // Format the code as a string
-    enzymes
-        .iter()
-        .map(|(name, site, fst3, fst5, ovhg_seq, size)| {
-            let code = format!(
+    // Define a simple generator that only outputs a few enzymes
+    #[crabtime::function]
+    fn generate_enzymes() -> String {
+        // Just generate three fixed enzymes to keep it simple
+        let enzymes = [
+            ("EcoRI", "GAATTC", 5, 1, "AATT", 6),
+            ("BamHI", "GGATCC", 5, 1, "GATC", 6),
+            ("HindIII", "AAGCTT", 5, 1, "AGCT", 6),
+        ];
+
+        // Generate minimal code to avoid potential syntax issues
+        let mut result = String::new();
+
+        for (name, site, fst3, fst5, ovhg_seq, size) in enzymes {
+            // Use format! which is more reliable than string concatenation
+            result.push_str(&format!(
                 r#"
-pub struct {name};
+pub struct {0};
 
-impl RestrictionEnzymeTrait for {name} {{
-    const NAME: &'static str = "{name}";
-    const SITE: &'static str = "{site}";
-    const FST3: Option<i32> = Some({fst3});
-    const FST5: Option<i32> = Some({fst5});
-    const OVHG_SEQ: Option<&'static str> = Some("{ovhg_seq}");
-    const SIZE: i32 = {size};
+impl RestrictionEnzymeTrait for {0} {{
+    const NAME: &'static str = "{0}";
+    const SITE: &'static str = "{1}";
+    const FST3: Option<i32> = Some({2});
+    const FST5: Option<i32> = Some({3});
+    const OVHG_SEQ: Option<&'static str> = Some("{4}");
+    const SIZE: i32 = {5};
 }}
-"#
-            );
+"#,
+                name, site, fst3, fst5, ovhg_seq, size
+            ));
+        }
 
-            // Optionally print each implementation for debugging
-            println!("Generated implementation for {name}:");
-            println!("{code}");
+        result
+    }
 
-            code
-        })
-        .collect::<Vec<_>>()
-        .join("\n")
+    // Call the generator
+    generate_enzymes!();
 }
 
-// Use a single, standalone macro invocation
-generate_restriction_enzymes!();
+// Re-export the generated structures
+pub use generated::*;
 
 #[cfg(test)]
 mod tests {
-    use super::*;
+    use super::{RestrictionEnzymeTrait, generated};
 
     #[test]
     fn test_ecori_name() {
-        assert_eq!(EcoRI::NAME, "EcoRI");
+        assert_eq!(generated::EcoRI::NAME, "EcoRI");
     }
 }

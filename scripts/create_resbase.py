@@ -21,7 +21,7 @@ for idx, (re_name, re_content) in enumerate(Restriction.Restriction_Dictionary.r
             with open(f"data/restriction_enzymes/enzymedata/{safename}.json", "w") as fout:
                     re_content['name'] = safename
                     json.dump(re_content, fout)
-                    
+
 
 
 # create the files
@@ -33,7 +33,18 @@ with open(f"data/restriction_enzymes/enum.txt", "w") as fout:
                 fout.write(f"   {safename},\n")
     fout.write("}\n")
 
-        
+
+
+# outout a csv
+with open("data/restriction_enzymes/enzyme.txt", "w") as fout:
+    for idx, (re_name, re_content) in enumerate(Restriction.Restriction_Dictionary.rest_dict.items()):
+        safename = camelcase(re_name)
+        print(re_content.keys())
+        re_content['name'] = safename
+
+        for key in ['compsite', 'dna', 'freq', 'fst3', 'fst5', 'id', 'inact_temp', 'opt_temp', 'ovhg', 'ovhgseq', 'results', 'scd3', 'scd5', 'site', 'size', 'substrat', 'suppl', 'uri', 'name']:
+            fout.write(f"{re_content[key]},")
+        fout.write(f"\n")
 
 # create the load all  code
 #
@@ -57,4 +68,3 @@ with open(f"data/restriction_enzymes/enum.txt", "w") as fout:
 #     fout.write("    let redata = serde_json::from_str(&filedata).expect(\"Failed to deserialize JSON data\");\n")
 #     fout.write("    redata\n")
 #     fout.write("}\n")
-   
